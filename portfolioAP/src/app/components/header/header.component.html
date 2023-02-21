@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid" id="navbar">
+            <!-- Logo de ArgentinaPrograma -->
+        <img id="logoAP" src="../../../assets/img/Logos/APLogo.png" class="img-fluid" alt="Logo de ArgentinaPrograma">
+            <!-- lista de redes sociales -->
+        <div id="redes">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item"><a href="https://github.com/YeiAlb/" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                <li class="list-group-item"><a href="https://www.linkedin.com/in/yeimer-alberto-m%C3%A1rquez-rojas-5a9568134//" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li class="list-group-item"><a href="https://twitter.com/YeimerAlberto/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+            </ul>
+                <!-- Botón de Login -->
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa-solid fa-lock"></i></button>
+        </div>
+    </div>
+</nav>
+
+<div class="row">
+    <div class="container" id="banner">
+        <img src="../../../assets/img/inmensidad-luz-texto.jpg" class="img-fluid rounded" alt="En la cima, hacia la luz en el horizonte" width="100%">
+    </div>
+</div>
+
+
+                        <!-- Modals -->
+            <!-- Bootstrap: Modal login-->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Sustituimos los puntos que trae el MODAL de Bootstrap.     
+                Formularios bootstrap: Overview, copiamos el que necesitamos y quitamos lo que no: check, email-help, cambiamos palabras-->
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+
+                    <!-- Esto hasta el módulo 8 no va a hacer nada -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <!-- Aquí se coloca el botón que se trae del formulario -->
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+        

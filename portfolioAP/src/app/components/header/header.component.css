@@ -1,0 +1,30 @@
+nav {
+    padding: inherit;
+}
+
+#redes {
+    display: flex;
+}
+
+#navbar {
+    position: absolute;
+    margin-top: 80px;
+}
+
+nav li {
+    background-color: transparent;
+}
+
+nav li i:hover {
+    transform: scale(2);
+    transition: 1.5s;
+}
+
+nav li i {
+    color: white;
+}
+
+#logoAP {
+    width: 150px;
+}
+
