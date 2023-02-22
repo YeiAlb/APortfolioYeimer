@@ -1,0 +1,21 @@
+/* Estilo del contenedor sobre mi */
+.sobreMi {
+    background-color: darksalmon;
+    border: solid;
+    border-color: gainsboro;
+    border-radius: 25px;
+    margin-top: 15px;
+    max-width: 1160px;
+}
+
+/* Estilo de la foto de perfil */
+#foto-perfil {
+    border-radius: 12rem;
+    width: 150px;
+}
+
+p {
+    text-align: justify;
+    padding-top: 20px;
+}
+
