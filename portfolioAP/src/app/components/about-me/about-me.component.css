@@ -5,13 +5,38 @@
     border-color: gainsboro;
     border-radius: 25px;
     margin-top: 15px;
-    max-width: 1160px;
+    max-width: 1100px;
+    padding: 15px 15px 5px;
+}
+
+#cont-perfil {
+    display: flex;
+    justify-content: center;
 }
 
 /* Estilo de la foto de perfil */
 #foto-perfil {
     border-radius: 12rem;
     width: 150px;
+}
+
+h1, button {
+    display: inline;
+}
+
+button {
+    inline-size: auto;
+    float: right;
+    background-color: transparent;
+    color: rgb(63, 62, 62);
+}
+
+.btn-light {
+    border: hidden;
+}
+
+h3 {
+    font-style: italic;
 }
 
 p {

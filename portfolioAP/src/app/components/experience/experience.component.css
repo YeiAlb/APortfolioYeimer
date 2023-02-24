@@ -1,0 +1,53 @@
+#experiencia {
+    border: solid;
+    border-radius: 25px;
+    margin-top: 15px;
+    margin-top: 15px;
+    padding: 15px 15px 5px;
+}
+
+img.img-fluid {
+    max-width: 100px;
+    min-width: 80px;
+    max-height: 100px;
+}
+
+.col-2 {
+    display: flex;
+    justify-content: center;
+}
+
+h2, h4, button {
+    display: inline;
+}
+
+@media (min-widht: 356px), (max-width: 550px) {
+    h4, button {
+        display: flex;
+    }
+}
+
+/* Cuando es muy chica la pantalla */
+@media (max-width: 355px) {
+    .col-2 {
+        display: none;
+    }
+    h4, button {
+        display: contents;
+    }
+}
+
+button {
+    inline-size: auto;
+    float: right;
+    background-color: transparent;
+    color: rgb(63, 62, 62);
+}
+
+#tutor-acad, #prof-univ1, #coord-past, #prof-univ2 {
+    padding-top: 10px;
+}
+
+.btn-light {
+    border: hidden;
+}
