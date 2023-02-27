@@ -1,0 +1,76 @@
+#skills {
+    border: solid;
+    border-radius: 25px;
+    margin-top: 15px;
+    padding: 15px 15px 5px;
+}
+
+.hard-skills {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.progress-HS, .progress-SK {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px violet;
+}
+
+button {
+    float: right;
+    background-color: transparent;
+    color: rgb(63, 62, 62);
+}
+
+.one-hp {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-top: 5px;
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px violet;
+}
+
+.buttons-one-hp {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column-reverse;
+}
+
+.soft-skills {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.progress {
+    height: 35px;
+    justify-content: flex-end;
+    margin: 5px;
+    align-items: baseline;
+}
+
+.progress-bar {
+    align-items: flex-end;
+}
+
+.buttons-one-skp {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+
+.btn-light {
+    border: none;
+}
+
+@media (max-width: 577px) {
+    .img-progress {
+        width: 55%;
+    }
+}

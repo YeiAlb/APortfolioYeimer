@@ -6,7 +6,7 @@
     padding: 15px 15px 5px;
 }
 
-img.img-fluid {
+img .img-fluid {
     max-width: 100px;
     min-width: 80px;
     max-height: 100px;
@@ -21,19 +21,17 @@ h2, h4, button {
     display: inline;
 }
 
+/* Responsive para los iconos de edición. */
 @media (min-widht: 356px), (max-width: 550px) {
     h4, button {
         display: flex;
     }
 }
 
-/* Cuando es muy chica la pantalla */
+/* Para quitar imágenes y su espacio del layout */
 @media (max-width: 355px) {
     .col-2 {
         display: none;
-    }
-    h4, button {
-        display: contents;
     }
 }
 
