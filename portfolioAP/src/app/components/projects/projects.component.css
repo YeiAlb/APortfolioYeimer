@@ -1,0 +1,35 @@
+#proyectos {
+    border: solid;
+    border-color: gainsboro;
+    border-radius: 25px;
+    margin-top: 15px;
+    padding: 15px 15px 5px;
+}
+
+.proyectos {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+button {
+    float: right;
+    background-color: transparent;
+    color: rgb(63, 62, 62);
+}
+
+.cardedition {
+    display: flex;
+    align-items: baseline;
+}
+
+.buttons-one-proyect {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+a {
+    margin-right: 12px;
+}
