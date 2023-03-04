@@ -6,6 +6,7 @@
     padding: 15px 15px 5px;
 }
 
+/* Estilos de Hard Skills */
 .hard-skills {
     display: flex;
     justify-content: space-between;
@@ -43,21 +44,21 @@ button {
     flex-direction: column-reverse;
 }
 
+/* Estilos de Soft Skills */
 .soft-skills {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
 }
 
-.progress {
-    height: 35px;
-    justify-content: flex-end;
-    margin: 5px;
-    align-items: baseline;
+h6, div.buttons-one-skp {
+    display: inline-flex;
 }
 
-.progress-bar {
-    align-items: flex-end;
+.progress {
+    height: 35px;
+    margin: 5px;
+    align-items: baseline;
 }
 
 .buttons-one-skp {
@@ -71,7 +72,14 @@ button {
 }
 
 @media (max-width: 577px) {
+    /* Responsive: cicle-progress */
     .img-progress {
         width: 55%;
+    }
+}
+
+@media (max-width: 575px) {
+    .progress {
+        display:flex;
     }
 }

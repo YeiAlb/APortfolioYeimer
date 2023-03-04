@@ -5,6 +5,7 @@
         </div>
     </div>
     <div class="row progress-HS">
+        <!-- HardSkills presentadas de modo circular, se instala vía npm ng circle-progress y se importa en el AppModule -->
         <div class="col hard-skills">
             <h4>Hard Skills</h4>
             <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-circle-plus"></i></button>
@@ -18,14 +19,22 @@
                 <div class="img-progress">
                     <circle-progress
                         [percent]="65"
+                        [maxPercent]="100"
+                        [titleColor]="'#367C5C'"
                         [radius]="50"
                         [responsive]="true"
-                        [imageSrc]="'../assets/img/icons/html5.png'"
-                        [showImage]="true"
+                        [imageSrc]="'../assets/img/icons/html.png'"
+                        [showImage]="false"
                         [imageHeight]="50"
                         [imageWidth]="50"
-                        [showUnits]="false"
-                        [showSubtitle]="false"
+                        [subtitle]="'HTML'"
+                        [subtitleColor]="'#367C5C'"
+                        [subtitleFontSize]="'15'"
+                        [subtitleFontWeight]="'10'"
+                        [showSubtitle]="true"
+                        [showUnits]="true"
+                        [unitsFontSize]="'15'"
+                        [unitsColor]="'#367C5C'"
                         [outerStrokeWidth]="4"
                         [innerStrokeWidth]="2"
                         [outerStrokeColor]="'rgb(77, 125, 196)'"
@@ -33,7 +42,10 @@
                         [animation]="true"
                         [animationDuration]="500">
                     </circle-progress>
-                </div>                    
+                </div>                
+                <div class="name-progress">
+
+                </div>    
             </div>
 
             <div class="tex-center col-sm-6 col-md-4 col-lg-3 col-xl-2 one-hp">
@@ -43,15 +55,23 @@
                 </div>
                 <div class="img-progress">
                     <circle-progress
-                        [percent]="70"
+                        [percent]="55"
+                        [maxPercent]="100"
+                        [titleColor]="'#367C5C'"
                         [radius]="50"
                         [responsive]="true"
-                        [imageSrc]="'../assets/img/icons/css-3.png'"
-                        [showImage]="true"
+                        [imageSrc]="'../assets/img/icons/css.png'"
+                        [showImage]="false"
                         [imageHeight]="50"
                         [imageWidth]="50"
-                        [showUnits]="false"
-                        [showSubtitle]="false"
+                        [subtitle]="'CSS'"
+                        [subtitleColor]="'#367C5C'"
+                        [subtitleFontSize]="'15'"
+                        [subtitleFontWeight]="'10'"
+                        [showSubtitle]="true"
+                        [showUnits]="true"
+                        [unitsFontSize]="'15'"
+                        [unitsColor]="'#367C5C'"
                         [outerStrokeWidth]="4"
                         [innerStrokeWidth]="2"
                         [outerStrokeColor]="'rgb(77, 125, 196)'"
@@ -69,15 +89,23 @@
                 </div>
                 <div class="img-progress">
                     <circle-progress
-                        [percent]="45"
+                        [percent]="50"
+                        [maxPercent]="100"
+                        [titleColor]="'#367C5C'"
                         [radius]="50"
                         [responsive]="true"
                         [imageSrc]="'../assets/img/icons/js.png'"
-                        [showImage]="true"
+                        [showImage]="false"
                         [imageHeight]="50"
                         [imageWidth]="50"
-                        [showUnits]="false"
-                        [showSubtitle]="false"
+                        [subtitle]="'JavaScript'"
+                        [subtitleColor]="'#367C5C'"
+                        [subtitleFontSize]="'15'"
+                        [subtitleFontWeight]="'10'"
+                        [showSubtitle]="true"
+                        [showUnits]="true"
+                        [unitsFontSize]="'15'"
+                        [unitsColor]="'#367C5C'"
                         [outerStrokeWidth]="4"
                         [innerStrokeWidth]="2"
                         [outerStrokeColor]="'rgb(77, 125, 196)'"
@@ -96,14 +124,22 @@
                 <div class="img-progress">
                     <circle-progress
                         [percent]="60"
+                        [maxPercent]="100"
+                        [titleColor]="'#367C5C'"
                         [radius]="50"
                         [responsive]="true"
                         [imageSrc]="'../assets/img/icons/git.png'"
-                        [showImage]="true"
+                        [showImage]="false"
                         [imageHeight]="50"
                         [imageWidth]="50"
-                        [showUnits]="false"
-                        [showSubtitle]="false"
+                        [subtitle]="'Git'"
+                        [subtitleColor]="'#367C5C'"
+                        [subtitleFontSize]="'15'"
+                        [subtitleFontWeight]="'10'"
+                        [showSubtitle]="true"
+                        [showUnits]="true"
+                        [unitsFontSize]="'15'"
+                        [unitsColor]="'#367C5C'"
                         [outerStrokeWidth]="4"
                         [innerStrokeWidth]="2"
                         [outerStrokeColor]="'rgb(77, 125, 196)'"
@@ -122,14 +158,22 @@
                 <div class="img-progress">
                     <circle-progress
                         [percent]="45"
+                        [maxPercent]="100"
+                        [titleColor]="'#367C5C'"
                         [radius]="50"
                         [responsive]="true"
                         [imageSrc]="'../assets/img/icons/bootstrap.png'"
-                        [showImage]="true"
+                        [showImage]="false"
                         [imageHeight]="50"
                         [imageWidth]="50"
-                        [showUnits]="false"
-                        [showSubtitle]="false"
+                        [subtitle]="'Bootstrap'"
+                        [subtitleColor]="'#367C5C'"
+                        [subtitleFontSize]="'15'"
+                        [subtitleFontWeight]="'10'"
+                        [showSubtitle]="true"
+                        [showUnits]="true"
+                        [unitsFontSize]="'15'"
+                        [unitsColor]="'#367C5C'"
                         [outerStrokeWidth]="4"
                         [innerStrokeWidth]="2"
                         [outerStrokeColor]="'rgb(77, 125, 196)'"
@@ -147,15 +191,23 @@
                 </div>
                 <div class="img-progress">
                     <circle-progress
-                        [percent]="45"
+                        [percent]="40"
+                        [maxPercent]="100"
+                        [titleColor]="'#367C5C'"
                         [radius]="50"
                         [responsive]="true"
                         [imageSrc]="'../assets/img/icons/angular.png'"
-                        [showImage]="true"
-                        [imageHeight]="70"
-                        [imageWidth]="70"
-                        [showUnits]="false"
-                        [showSubtitle]="false"
+                        [showImage]="false"
+                        [imageHeight]="50"
+                        [imageWidth]="50"
+                        [subtitle]="'Angular'"
+                        [subtitleColor]="'#367C5C'"
+                        [subtitleFontSize]="'15'"
+                        [subtitleFontWeight]="'10'"
+                        [showSubtitle]="true"
+                        [showUnits]="true"
+                        [unitsFontSize]="'15'"
+                        [unitsColor]="'#367C5C'"
                         [outerStrokeWidth]="4"
                         [innerStrokeWidth]="2"
                         [outerStrokeColor]="'rgb(77, 125, 196)'"
@@ -169,79 +221,87 @@
     </div>
 
     <div class="row progress-SK">
+        <!-- Las SoftSkills se presentan a manera de barras, obtenidas a través de Bootstrap -->
         <div class="col soft-skills">
             <h4>Soft Skills</h4>
             <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-circle-plus"></i></button>
         </div>
         <div class="soft-progress">
             <div class="offset-1 col-11">
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-label="Danger striped example" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">Scrum Master
-                    </div>
-                    <div class="buttons-one-skp">
-                        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button>
-                        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
-                    </div>
+                <h6>Scrum Master</h6>
+                <div class="buttons-one-skp">
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button>
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
+                </div>
+                <div class="progress">git ad
+                    <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Danger striped example" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
                 </div>
             </div>
 
             <div class="offset-1 col-11">
+                <h6>Liderazgo, coordinación y trabajo en equipo</h6>
+                <div class="buttons-one-skp">
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button>
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
+                </div>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Default striped example" style="width: 70%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">Liderazgo, coordinación y trabajo en equipo
-                    </div>
-                    <div class="buttons-one-skp">
-                        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button>
-                        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
-                    </div>
+                    <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Default striped example" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
                 </div>
             </div>
 
             <div class="offset-1 col-11">
+                <h6>Inteligencia y pensamiento critico</h6>
+                <div class="buttons-one-skp">
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button>
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
+                </div>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-label="Success striped example" style="width: 90%" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100">Inteligencia y pensamiento critico
-                    </div>
-                    <div class="buttons-one-skp">
-                        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button>
-                        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
-                    </div>
+                    <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Success striped example" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
                 </div>
             </div>
 
             <div class="offset-1 col-11">
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Default striped example"
-                            style="width: 85%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Comunicación y capacidad para
-                            resolución de problemas
-                    </div>
-                    <div class="buttons-one-skp">
+                <h6>Capacidad resolutiva de problemas</h6>
+                <div class="buttons-one-skp">
                         <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button>
                         <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
                     </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Default striped example" style="width: 85%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">85%</div>
                 </div>
             </div>
 
             <div class="offset-1 col-11">
+                <h6>Habilidades de comunicación</h6>
+                <div class="buttons-one-skp">
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button>
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
+                </div>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-label="Success striped example"
-                            style="width: 75%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">Buena actitud y empatía
-                        </div>
-                    <div class="buttons-one-skp">
-                        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button>
-                        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
-                    </div>
+                    <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Success striped example" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
                 </div>
             </div>
 
             <div class="offset-1 col-11">
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Success striped example"
-                            style="width: 60%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">Dominio de inglés
-                        </div>
-                    <div class="buttons-one-skp">
-                        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button>
-                        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
-                    </div>
+                <h6>Buena actitud y empatía</h6>
+                <div class="buttons-one-skp">
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button>
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
                 </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Success striped example" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                </div>
+            </div>
+
+            <div class="offset-1 col-11">
+                <h6>Inglés</h6>
+                <div class="buttons-one-skp">
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button>
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Success striped example" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                 </div>
             </div>
         </div>
     </div>

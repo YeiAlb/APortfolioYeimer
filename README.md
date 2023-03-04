@@ -2,6 +2,8 @@
 Portfolio Web, para Argentina Programa.
 
 # PortfolioAP
+Nombre de la caperta que almacena todo el contenido del portfolio.
+
 ##Maquetado Estático
 se crea primero el maquetado estático, con HTML y CSS, para luego facilitar la configuración del Maquetado Dinámico a través de la plataforma y framework de Angular.
 
