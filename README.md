@@ -2,10 +2,10 @@
 Portfolio Web, para Argentina Programa.
 
 # PortfolioAP
-##Maquetado Estático
+## Maquetado Estático
 se crea primero el maquetado estático, con HTML y CSS, para luego facilitar la configuración del Maquetado Dinámico a través de la plataforma y framework de Angular.
 
-##Maquetado Dinámico
+## Maquetado Dinámico
 Este proyecto se configura con la siguiente versión [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
 Se construye a partir del Maquetado Estático y se inserta en los diversos componentes creados en Angular.
 
