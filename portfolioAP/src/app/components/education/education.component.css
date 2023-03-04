@@ -19,7 +19,7 @@ img.img-fluid {
 }
 
 h2, h4, button {
-    display: inline;
+    display: inline-block;
 }
 
 /* Responsive para los iconos de edición. */

@@ -2,8 +2,11 @@
 Portfolio Web, para Argentina Programa.
 
 # PortfolioAP
+
 ## Maquetado Estático
-se crea primero el maquetado estático, con HTML y CSS, para luego facilitar la configuración del Maquetado Dinámico a través de la plataforma y framework de Angular.
+=======
+Nombre de la caperta que almacena todo el contenido del portfolio.
+e crea primero el maquetado estático, con HTML y CSS, para luego facilitar la configuración del Maquetado Dinámico a través de la plataforma y framework de Angular.
 
 ## Maquetado Dinámico
 Este proyecto se configura con la siguiente versión [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
@@ -20,7 +23,3 @@ En orden de aparición en la página web y su contenido:
 * skills: se separan las hard skills y soft skills, las primeras presentadas de manera singular y las segundas a modo de barras.
 * projects: hasta el momento del diseño de este Porfolio manifiesta los proyectos trabajados, aunque no son creados de manera autónoma, propia o personal, sino que fueron diseñados a partir de los cursos que han contribuido al aprendizaje de la programación.
 * footer: una sencilla presentación que contiene la fecha, los derechos de autoría, año y una pequeña miniatura que es el logo de las iniciales de mis nombres y apellidos.
-
-## 
-
-
