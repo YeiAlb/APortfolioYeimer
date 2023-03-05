@@ -28,13 +28,9 @@ nav li i {
     width: 150px;
 }
 /* Responsive para la navbar */
-@media (max-width: 395px){
-    #redes {
-        margin-top:23%;
-        flex-direction: column;
-    }
-    ul {
-        flex-direction: column;
+@media (max-width: 360px){
+    #logoAP {
+        display: none;
     }
 }
 
