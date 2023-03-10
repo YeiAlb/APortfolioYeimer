@@ -6,7 +6,7 @@ Portfolio Web, para Argentina Programa.
 ## Maquetado Estático
 =======
 Nombre de la caperta que almacena todo el contenido del portfolio.
-e crea primero el maquetado estático, con HTML y CSS, para luego facilitar la configuración del Maquetado Dinámico a través de la plataforma y framework de Angular.
+Se ha creado primero el maquetado estático, con HTML y CSS, para luego facilitar la configuración del Maquetado Dinámico a través de la plataforma y framework de Angular.
 
 ## Maquetado Dinámico
 Este proyecto se configura con la siguiente versión [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
