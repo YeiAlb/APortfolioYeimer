@@ -24,5 +24,5 @@ En orden de aparición en la página web y su contenido:
 * projects: hasta el momento del diseño de este Porfolio manifiesta los proyectos trabajados, aunque no son creados de manera autónoma, propia o personal, sino que fueron diseñados a partir de los cursos que han contribuido al aprendizaje de la programación.
 * footer: una sencilla presentación que contiene la fecha, los derechos de autoría, año y una pequeña miniatura que es el logo de las iniciales de mis nombres y apellidos.
 
-###Styles
+### Styles
 En un primer momento se dearrollaron estilos individuales para cada componente, luego con la práctica, me di cuenta de que había varios estilos repetidos que se podían globalizar, aún quedan estilos que se pueden unificar.
