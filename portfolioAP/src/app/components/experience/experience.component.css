@@ -1,14 +1,14 @@
-#experiencia {
+/* #experiencia {
     border: solid;
     border-color: gainsboro;
     border-radius: 25px;
     margin-top: 15px;
     padding: 15px 15px 5px;
-}
+} */
 
-img .img-fluid {
+/* Para que la imagen institucional conserve un tamaño adecuado */
+.img-fluid {
     max-width: 100px;
-    min-width: 80px;
     max-height: 100px;
 }
 

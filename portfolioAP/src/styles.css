@@ -2,3 +2,11 @@
 body {
     background-color: lightcyan;
 }
+
+.container {
+    border: solid;
+    border-color: gainsboro;
+    border-radius: 25px;
+    margin-top: 15px;
+    padding: 15px 15px 15px;
+}

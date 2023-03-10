@@ -1,15 +1,20 @@
-#proyectos {
+/* #proyectos {
     border: solid;
     border-color: gainsboro;
     border-radius: 25px;
     margin-top: 15px;
     padding: 15px 15px 5px;
-}
+} */
 
 .proyectos {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+}
+
+.one-proyect {
+    display: flex;
+    justify-content: center;
 }
 
 button {
