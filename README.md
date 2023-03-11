@@ -25,4 +25,5 @@ En orden de aparición en la página web y su contenido:
 * footer: una sencilla presentación que contiene la fecha, los derechos de autoría, año y una pequeña miniatura que es el logo de las iniciales de mis nombres y apellidos.
 
 ### Styles
-En un primer momento se dearrollaron estilos individuales para cada componente, luego con la práctica, me di cuenta de que había varios estilos repetidos que se podían globalizar, aún quedan estilos que se pueden unificar.
+En un primer momento se desarrollaron estilos individuales para cada componente, luego con la práctica, me di cuenta de que había varios estilos repetidos que se podían globalizar, aún quedan estilos que se pueden unificar.
+Quiero resaltar que dentro de los estilos hay diversas maneras de hacer lo mismo, quizá en un primer momento, por no tener una constancia continua en la realización del formato y ante la falta de práctica, cuando iba hacer lo que quería simplemente usaba las herramientas del desarrollador para lograr el estilo deseado, y por ello hay varias modos de estilos que hacen la misma cosa, al darme cuenta podría haber modificado y unificar pero ya estoy sobre el tiempo, y esto me recordará la constancia que requiere la programación, evitar repetir código y aprovechar el tiempo.
