@@ -9,7 +9,7 @@
                 <li class="list-group-item"><a href="https://www.linkedin.com/in/yeimer-alberto-m%C3%A1rquez-rojas-5a9568134//" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
                 <li class="list-group-item"><a href="https://twitter.com/YeimerAlberto/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
             </ul>
-                <!-- Botón de Login -->
+                <!-- Botón de Login (Button trigger modal) -->
             <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa-solid fa-lock"></i></button>
         </div>
     </div>
@@ -17,7 +17,8 @@
 
 <div class="row">
     <div id="banner">
-        <img src="../../../assets/img/Banner-luz.jpg" class="img-fluid rounded" alt="En la cima, hacia la luz del horizonte" width="100%">
+        <a href="https://ibb.co/gVtdRkw"><img src="https://i.ibb.co/py4QLYZ/Banner-luz.jpg" alt="Banner-luz" border="0" width="100%"></a>
+        <!-- <img src="../../../assets/img/Banner-luz.jpg" class="img-fluid rounded" alt="En la cima, hacia la luz del horizonte" width="100%"> -->
     </div>
 </div>
 
@@ -32,17 +33,18 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <!-- Sustituimos los puntos que trae el MODAL de Bootstrap.     
-                Formularios bootstrap: Overview, copiamos el que necesitamos y quitamos lo que no: check, email-help, cambiamos palabras-->
+                <!-- Formulario para correo y contraseña-->
                 <form>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="InputEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
+                        <label for="InputPassword" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="InputPassword">
                     </div>
+                        <!-- <button type="submit" class="btn btn-primary">Submit</button>
+                    </form> ESte botón se desplaza -->
 
                     <!-- Esto hasta el módulo 8 no va a hacer nada -->
                     <div class="modal-footer">
