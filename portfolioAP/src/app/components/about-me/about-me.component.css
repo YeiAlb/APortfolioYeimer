@@ -1,4 +1,4 @@
-/* Estilo del contenedor sobre mi */
+/* =============== SOBRE MI =============== */
 #sobreMi {
     background-color: darksalmon;
     border: solid;
@@ -14,22 +14,26 @@
     justify-content: center;
 }
 
-/* Estilo de la foto de perfil */
+/* =============== FOTO DE PERFIL =============== */
 #foto-perfil {
     border-radius: 12rem;
     width: 150px;
     box-shadow: gray 5px 5px 5px;
 }
 
-h1, button {
-    display: inline;
+h4, button {
+    display: inline-flex;
+    align-items: baseline;  
 }
 
 button {
-    inline-size: auto;
     float: right;
     background-color: transparent;
     color: rgb(63, 62, 62);
+}
+
+#btn-editar-perfil {
+    display: contents;
 }
 
 .btn-light {
@@ -42,8 +46,13 @@ h3 {
 
 p {
     text-align: justify;
-    padding-top: 20px;
 }
 
 
-
+/* =============== PARA PANTALLA MEDIANA =============== */
+@media (max-width: 576px) {
+    h1, h3 {
+        display: flex;
+        justify-content: center;
+    }
+}

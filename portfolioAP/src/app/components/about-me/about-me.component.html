@@ -1,15 +1,56 @@
 <div class="container-fluid" id="sobreMi">
     <div class="row align-items-center">
-        <!-- Imagen de perfil -->
+        <!-- ============================================= -->
+        <!-- IMAGEN DE PERFIL -->
+        <!-- ============================================= -->
         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" id="cont-perfil">
             <img src="../../../assets/img/Foto de perfil.jpg" class="img-fluid img-thumbnail" id="foto-perfil" alt="Foto de Perfil">
+            <!-- ============================================= -->
+            <!-- BOTÓN EDITAR PERFIL (Trigger Modal) -->
+            <!-- ============================================= -->
+            <button type="button" class="btn btn-light" id="btn-editar-perfil" data-bs-toggle="modal" data-bs-target="#perfilModal"><i class="fa fa-pen-to-square"></i></button>
         </div>
         <div class="col-xs-12 col-sm-8 col-md-9 col-lg-10">
-            <h1>Yeimer Alberto Márquez</h1>
-            <!-- Botón de Login -->
-            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
-            <h3>Full Stack Developer Jr.</h3>
-            <p>Educador con experiencia en docencia universitaria; habilidades organizativas, liderazgo de grupos, dominio de Microsoft Office y plataformas de aula virtual, con conocimientos en <b>programación y desarrollo WEB</b>.</p>
+            <h1 class="mt-2">Yeimer Alberto Márquez</h1>
+            <h3 class="mb-4"> Full Stack Developer Jr.</h3>
+            <h4>Sobre Mi</h4>
+            <!-- ============================================= -->
+            <!-- BOTÓN EDITAR SOBRE MÍ (Trigger Modal) -->
+            <!-- ============================================= -->
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#sobreMiModal"><i class="fa fa-pen-to-square"></i></button>
+            <p class="mt-2">Educador con experiencia en docencia universitaria; habilidades organizativas, liderazgo de grupos, conocimiento sobre diversos programas básicos de Microsoft Office, uso de algunas plataformas de aula virtual, y aprendizaje continuo sobre <b>programación y desarrollo WEB</b>.</p>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- MODAL LOGIN (Bootstrap)) -->
+<!-- ============================================= -->
+<div class="modal fade" id="sobreMiModal" tabindex="-1" aria-labelledby="sobreMiModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="sobreMiModalLabel">Sobre mí</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- ============================================= -->
+                <!-- FORMULARIO: CORREO Y CONTRASEÑA -->
+                <!-- ============================================= -->
+                <form>
+                    <div class="mb-3">
+                        <label for="sobreMi" class="form-label">Descríbete</label>
+                        <textarea class="form-control" id="sobreMi" aria-describedby="emailHelp"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <!-- ============================================= -->
+                        <!-- BOTÓN DEL FORMULARIO -->
+                        <!-- ============================================= -->
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

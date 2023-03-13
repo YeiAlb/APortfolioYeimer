@@ -6,7 +6,7 @@
     padding: 15px 15px 5px;
 } */
 
-/* Para que la imagen institucional conserve un tamaño adecuado */
+/* =============== LOGO EMPRESA =============== */
 .img-fluid {
     max-width: 100px;
     max-height: 100px;
@@ -21,20 +21,6 @@ h2, h4, button {
     display: inline-block;
 }
 
-/* Responsive para los iconos de edición. */
-@media (min-widht: 356px), (max-width: 550px) {
-    h4, button {
-        display: flex;
-    }
-}
-
-/* Para quitar imágenes y su espacio del layout */
-@media (max-width: 355px) {
-    .col-2 {
-        display: none;
-    }
-}
-
 button {
     inline-size: auto;
     float: right;
@@ -42,10 +28,22 @@ button {
     color: rgb(63, 62, 62);
 }
 
-#tutor-acad, #prof-univ1, #coord-past, #prof-univ2 {
-    padding-top: 10px;
-}
-
 .btn-light {
     border: hidden;
+}
+
+/* =============== PARA PANTALLA MEDIANA =============== */
+/* ========== Iconos =========== */
+@media (min-widht: 356px), (max-width: 550px) {
+    h4, button {
+        display: flex;
+    }
+}
+
+/* =============== PARA PANTALLA PEQUEÑA =============== */
+/* ========== Quitar imágenenes y espacio =========== */
+@media (max-width: 355px) {
+    .col-2 {
+        display: none;
+    }
 }
