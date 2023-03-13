@@ -24,9 +24,6 @@ nav li i {
     color: white;
 }
 
-#logoAP {
-    width: 150px;
-}
 /* Responsive para la navbar */
 @media (max-width: 360px){
     #logoAP {
