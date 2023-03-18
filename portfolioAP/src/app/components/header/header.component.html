@@ -1,15 +1,37 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg">
     <div class="container-fluid" id="navbar">
         <!-- ============================================= -->
         <!-- LOGO DE ARGENTINA PROGRAMA -->
         <!-- ============================================= -->
-        <a id="logoAP" class="navbar-brand" href="https://argentinaprograma.inti.gob.ar/" target="_blank"><img src="../../../assets/img/logos/APLogo.png" alt="Logo Argentina Programa" width="130em" height="auto"></a>
-
+        <a class="navbar-brand" id="logoAP" href="https://argentinaprograma.inti.gob.ar/" target="_blank"><img class="logoAP" src="../../../assets/img/logos/APLogo.png" alt="Logo Argentina Programa" width="130em" height="auto"></a>
         <!-- ============================================= -->
-        <!-- REDES SOCIALES -->
-        <!-- ============================================= -->
-        <div id="redes">
-            <ul class="list-group list-group-horizontal">
+        <!-- ICONO HAMBURGUESA: NAVBAR -->
+        <!-- ============================================= -->        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#aboutMe">Sobre mí</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#experience">Experiencia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">Educación</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Hard & soft skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Proyectos</a>
+                </li>
+            </ul>
+            <!-- ============================================= -->
+            <!-- REDES SOCIALES -->
+            <!-- ============================================= -->
+            <ul class="list-group list-group-horizontal m-1" id="redes">
                 <li class="list-group-item"><a href="https://github.com/YeiAlb/" target="_blank"><i class="fa-brands fa-github"></i></a></li>
                 <li class="list-group-item"><a href="https://www.linkedin.com/in/yeimer-alberto-m%C3%A1rquez-rojas-5a9568134//" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
                 <li class="list-group-item"><a href="https://twitter.com/YeimerAlberto/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
@@ -18,25 +40,27 @@
             <!-- ============================================= -->
             <!-- BOTÓN LOGIN (Trigger Modal) -->
             <!-- ============================================= -->
-            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa-solid fa-lock"></i></button>
+            <button type="button" class="btn btn-light m-1" data-bs-toggle="modal" data-bs-target="#loginModalCerrado"><i class="fa-solid fa-lock"></i></button>
+            <button type="button" class="btn btn-light m1" data-bs-toggle="modal" data-bs-target="#loginModalAbierto"><i class="fa-solid fa-lock-open"></i></button>
+            <!-- Este botón logout no lleva modal -->
         </div>
     </div>
 </nav>
 
-<div class="row">
+<div class="row pt-1">
     <div id="banner">
-        <a href="https://ibb.co/gVtdRkw"><img src="https://i.ibb.co/py4QLYZ/Banner-luz.jpg" alt="Banner-luz" border="0" width="100%"></a>
+        <a href="#"><img src="https://i.ibb.co/py4QLYZ/Banner-luz.jpg" alt="Banner-luz" border="0" width="100%"></a>
     </div>
 </div>
 
 <!-- ============================================= -->
 <!-- MODAL LOGIN (Bootstrap)) -->
 <!-- ============================================= -->
-<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+<div class="modal fade" id="loginModalCerrado" tabindex="-1" aria-labelledby="loginModalLabelCerrado" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
+                <h1 class="modal-title fs-5" id="loginModalLabelCerrado">Login - Portfolio Web AP</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -45,11 +69,11 @@
                 <!-- ============================================= -->
                 <form>
                     <div class="mb-3">
-                        <label for="InputEmail" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
+                        <label for="InputEmail" class="form-label">Tu email</label>
+                        <input type="email" class="form-control" id="InputEmail">
                     </div>
                     <div class="mb-3">
-                        <label for="InputPassword" class="form-label">Contraseña</label>
+                        <label for="InputPassword" class="form-label">Tu contraseña</label>
                         <input type="password" class="form-control" id="InputPassword">
                     </div>
                     <div class="modal-footer">

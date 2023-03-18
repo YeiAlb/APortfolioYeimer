@@ -1,43 +1,47 @@
 /* =============== SOBRE MI =============== */
-#sobreMi {
-    background-color: darksalmon;
+#aboutMe {
+    background-color: rgb(223 206 188);
     border: solid;
     border-color: gainsboro;
-    border-radius: 25px;
-    margin-top: 15px;
+    border-end-start-radius: 25px; /*-->*/
+    border-bottom-right-radius: 25px; /*--> Dos maneras diferentes de hacer border-radius en la parte inferior*/
     max-width: 1100px;
-    padding: 15px 15px 5px;
 }
 
-#cont-perfil {
+/* #botonesEdicion {
+    background-color: rgb(65 56 34);
+    max-width: 1100px;
+    border: none;
+} */
+
+#contenedor-perfil {
     display: flex;
     justify-content: center;
 }
 
 /* =============== FOTO DE PERFIL =============== */
-#foto-perfil {
-    border-radius: 12rem;
+#imgPerfil {
+    border-radius: 4rem;
     width: 150px;
     box-shadow: gray 5px 5px 5px;
 }
 
-h4, button {
-    display: inline-flex;
-    align-items: baseline;  
+#fotoPerfil, #nombresApellidos, #ocupacion, #descripcionSobreMi {
+    display: block;
+    border-radius: 8px;
+    width: 85%;
 }
 
-button {
+h1, #btnEditarPerfil {
+    display: inline-block;
+    align-items: baseline;
+}
+
+#btnEditarPerfil {
     float: right;
+    border: hidden;
     background-color: transparent;
     color: rgb(63, 62, 62);
-}
-
-#btn-editar-perfil {
-    display: contents;
-}
-
-.btn-light {
-    border: hidden;
 }
 
 h3 {
@@ -48,6 +52,9 @@ p {
     text-align: justify;
 }
 
+textarea {
+    height: 8rem;
+}
 
 /* =============== PARA PANTALLA MEDIANA =============== */
 @media (max-width: 576px) {

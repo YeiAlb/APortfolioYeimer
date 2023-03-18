@@ -2,28 +2,28 @@
     <div class="row">
         <div class="col">
             <h2>Experiencia laboral</h2>
-            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-circle-plus"></i></button>
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addExperienciaModal"><i class="fa fa-circle-plus"></i></button>
         </div>
     </div>
 
     <!-- Prima columna offset de margen, las dos siguientes: imagen institucional, nueve: descripción laboral. Total cuatro experiencias laborales de interés -->
-    <div class="row align-items-center" id="tutor-acad">   
+    <div class="row align-items-center" id="tutorAcad">   
         <div class="col-2 offset-1">
-            <img class="img-fluid" src="../../../assets/img/logos/freelancer-logo.jpg" alt="Logo freelance">
+            <img class="img-fluid logoInstitucional" src="../../../assets/img/logos/freelancer-logo.jpg" alt="Logo freelance">
         </div>                           
         <div class="col-9 border-top pt-2">
             <ul>
-                <h4 class="mt-2">Tutor Académico</h4>
+                <h4 class="cargo mt-2">Tutor Académico</h4>
                 <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button>
                 <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
                 <li class="sede">Freelance</li>
                 <li class="fecha">may 2017 - actualidad</li>
-                <li class="lugar">Capital Federal, Argentina</li>
+                <li class="ubicacion"><span class="ciudad">Capital Federal, </span><span class="pais">Argentina</span></li>
             </ul>
         </div>
     </div>
 
-    <div class="row align-items-center" id="prof-univ1">   
+    <div class="row align-items-center" id="profeUniv1">   
         <div class="col-2 offset-1">
             <img class="img-fluid" src="../../../assets/img/logos/logo_ula.jpg" alt="Logo ULA">
         </div>                           
@@ -39,7 +39,7 @@
         </div>
     </div>
 
-    <div class="row align-items-center" id="coord-past">   
+    <div class="row align-items-center" id="coordPast">   
         <div class="col-2 offset-1" id="logo3">
             <img class="img-fluid" src="../../../assets/img/logos/fe-y-alegria-log.jpg" alt="Logo Fe y Alegría">
         </div>                           
@@ -55,7 +55,7 @@
         </div>
     </div>
 
-    <div class="row align-items-center" id="prof-univ2">   
+    <div class="row align-items-center" id="profeUniv2">   
         <div class="col-2 offset-1">
             <img class="img-fluid" src="../../../assets/img/logos/logo-iuesta.jpg" alt="Logo IUESTA">
         </div>                           
@@ -68,6 +68,98 @@
                 <li class="fecha">feb 2007 - ago 2011</li>
                 <li class="lugar">Palmira, Táchira, Venezuela</li>
             </ul>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- MODAL Agregar Experiencia -->
+<!-- ============================================= -->
+<div class="modal fade" id="addExperienciaModal" tabindex="-1" aria-labelledby="addExperienciaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addExperienciaModalLabel">Agrega nueva experiencia laboral</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- ============================================= -->
+                <!-- FORMULARIO: Agregar Experiencia -->
+                <!-- ============================================= -->
+                <form>
+                    <div class="mb-3">
+                        <label for="logoInstitucional" class="form-label">Logo de la empresa:</label>
+                        <input type="url" placeholder="Inserte URL del logo" id="logoInstitucional" alt="Logo de la empresa" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cargo" class="form-label">Cargo u ocupación:</label>
+                        <input type="text" placeholder="Ingrese su cargo u ocupación" id="cargo" name="cargo" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaInicial" class="form-label">Fecha de inicio:</label>
+                        <input type="date" placeholder="Ingrese fecha de inicio" id="fechaInicial" name="fechaInicial" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaTerminal" class="form-label">Fecha de culminación:</label>
+                        <input type="date" placeholder="Ingrese fecha de finalización" id="fechaTerminal" name="fechaInicial" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ubicacion" class="form-label">Ciudad, País:</label>
+                        <input type="text" placeholder="Ingrese ciudad y país" id="ubicacion" name="ubicacion" class="form-control" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- MODAL Editar Experiencia. -->
+<!-- ============================================= -->
+<div class="modal fade" id="editaPerfilModal" tabindex="-1" aria-labelledby="editaPerfilModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="editaPerfilModalLabel">Edita tu perfil</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- ============================================= -->
+                <!-- FORMULARIO Perfil -->
+                <!-- ============================================= -->
+                <form>
+                    <div class="mb-3">
+                        <label for="fotoPerfil" class="form-label">Foto del perfil:</label>
+                        <input type="url" placeholder="Inserte URL de la foto" id="fotoPerfil" name="fotoPerfil" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombresApellidos" class="form-label">Nombres / Apellidos:</label>
+                        <input type="text" placeholder="Ingrese su(s) Nombre(s) y Apellido(s)" id="nombresApellidos" name="identidad" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ocupacion" class="form-label">Ocupación:</label>
+                        <input type="text" placeholder="Ingrese su ocupación actual" id="ocupacion" name="ocupacion" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcionSobreMi" class="form-label">Sobre Mí:</label>
+                        <textarea type="text" placeholder="Ingrese descripción" id="descripcionSobreMi" name="descripcionSobreMi" class="form-control" required></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

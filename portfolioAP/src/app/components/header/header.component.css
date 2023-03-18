@@ -1,14 +1,17 @@
-nav {
+/* nav {
     padding: inherit;
+} */
+
+.navbar {
+    background-color: rgb(47, 36, 8);
 }
+
+/* .logoAP {
+    filter:invert(1)
+} */
 
 #redes {
     display: flex;
-}
-
-#navbar {
-    position: absolute;
-    margin-top: 80px;
 }
 
 nav li {
@@ -21,13 +24,28 @@ nav li i:hover {
 }
 
 nav li i {
-    color: white;
+    color: rgb(173, 134, 61);
 }
 
-/* Responsive para la navbar */
-@media (max-width: 360px){
-    #logoAP {
-        display: none;
+.navbar-toggler {
+    background-color: white
+}
+
+a.nav-link.active {
+    color: rgb(173, 134, 61)
+}
+
+a.nav-link {
+    color: rgb(173, 134, 61)
+}
+
+#navbarSupportedContent {
+    text-align: center;
+}
+
+/* =============== PANTALLA MD, SM Y XS =============== */
+@media(max-width:992px) {
+    #redes {
+        justify-content: center;
     }
 }
-

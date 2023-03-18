@@ -1,56 +1,66 @@
-<div class="container-fluid" id="sobreMi">
-    <div class="row align-items-center">
-        <!-- ============================================= -->
-        <!-- IMAGEN DE PERFIL -->
-        <!-- ============================================= -->
-        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" id="cont-perfil">
-            <img src="../../../assets/img/Foto de perfil.jpg" class="img-fluid img-thumbnail" id="foto-perfil" alt="Foto de Perfil">
+<section>
+    <div class="container-fluid" id="aboutMe">
+        <div class="row align-items-center">
             <!-- ============================================= -->
-            <!-- BOTÓN EDITAR PERFIL (Trigger Modal) -->
+            <!-- Imagen de Perfil. -->
             <!-- ============================================= -->
-            <button type="button" class="btn btn-light" id="btn-editar-perfil" data-bs-toggle="modal" data-bs-target="#perfilModal"><i class="fa fa-pen-to-square"></i></button>
-        </div>
-        <div class="col-xs-12 col-sm-8 col-md-9 col-lg-10">
-            <h1 class="mt-2">Yeimer Alberto Márquez</h1>
-            <h3 class="mb-4"> Full Stack Developer Jr.</h3>
-            <h4>Sobre Mi</h4>
-            <!-- ============================================= -->
-            <!-- BOTÓN EDITAR SOBRE MÍ (Trigger Modal) -->
-            <!-- ============================================= -->
-            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#sobreMiModal"><i class="fa fa-pen-to-square"></i></button>
-            <p class="mt-2">Educador con experiencia en docencia universitaria; habilidades organizativas, liderazgo de grupos, conocimiento sobre diversos programas básicos de Microsoft Office, uso de algunas plataformas de aula virtual, y aprendizaje continuo sobre <b>programación y desarrollo WEB</b>.</p>
+            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" id="contenedor-perfil">
+                <img src="../../../assets/img/Foto de perfil.jpg" class="img-fluid img-thumbnail" id="imgPerfil" alt="Foto de Perfil">
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-9 col-lg-10">
+                <h1 class="mt-2">Yeimer Alberto Márquez</h1>
+                <button type="button" class="btn btn-light" id="btnEditarPerfil" data-bs-toggle="modal" data-bs-target="#editaPerfilModal"><i class="fa fa-pen-to-square"></i></button>
+                <h3 class="mb-4"> Full Stack Developer Jr.</h3>
+                <h4>Sobre Mí</h4>
+                <p class="mt-2 me-2">Educador con experiencia en docencia universitaria; habilidades organizativas, liderazgo de grupos, conocimiento sobre diversos programas básicos de Microsoft Office, uso de algunas plataformas de aula virtual, aprendizaje continuo sobre <b>programación y desarrollo WEB</b>.</p>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <!-- ============================================= -->
-<!-- MODAL LOGIN (Bootstrap)) -->
+<!-- MODAL Editar Perfil. -->
 <!-- ============================================= -->
-<div class="modal fade" id="sobreMiModal" tabindex="-1" aria-labelledby="sobreMiModalLabel" aria-hidden="true">
+<div class="modal fade" id="editaPerfilModal" tabindex="-1" aria-labelledby="editaPerfilModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="sobreMiModalLabel">Sobre mí</h1>
+                <h1 class="modal-title fs-5" id="editaPerfilModalLabel">Edita tu perfil</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <!-- ============================================= -->
-                <!-- FORMULARIO: CORREO Y CONTRASEÑA -->
+                <!-- FORMULARIO Perfil -->
                 <!-- ============================================= -->
                 <form>
                     <div class="mb-3">
-                        <label for="sobreMi" class="form-label">Descríbete</label>
-                        <textarea class="form-control" id="sobreMi" aria-describedby="emailHelp"></textarea>
+                        <label for="fotoPerfil" class="form-label">Foto del perfil:</label>
+                        <input type="url" placeholder="Inserte URL de la foto" id="fotoPerfil" name="fotoPerfil" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombresApellidos" class="form-label">Nombres / Apellidos:</label>
+                        <input type="text" placeholder="Ingrese su(s) Nombre(s) y Apellido(s)" id="nombresApellidos" name="identidad" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ocupacion" class="form-label">Ocupación:</label>
+                        <input type="text" placeholder="Ingrese su ocupación actual" id="ocupacion" name="ocupacion" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcionSobreMi" class="form-label">Sobre Mí:</label>
+                        <textarea type="text" placeholder="Ingrese descripción" id="descripcionSobreMi" name="descripcionSobreMi" class="form-control" required></textarea>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         <!-- ============================================= -->
-                        <!-- BOTÓN DEL FORMULARIO -->
+                        <!-- Botón del formulario -->
                         <!-- ============================================= -->
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+
+
