@@ -1,94 +1,152 @@
 <div class="container" id="experience">
+    <!-- ============================================= -->
+    <!-- Experiencia Laboral. -->
+    <!-- ============================================= -->
     <div class="row">
         <div class="col">
             <h2>Experiencia laboral</h2>
+            <!-- ============================================= -->
+            <!-- BOTÓN: Agregar Experiencia laboral. -->
+            <!-- ============================================= -->
             <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addExperienciaModal"><i class="fa fa-circle-plus"></i></button>
         </div>
     </div>
 
-    <!-- Prima columna offset de margen, las dos siguientes: imagen institucional, nueve: descripción laboral. Total cuatro experiencias laborales de interés -->
-    <div class="row align-items-center" id="tutorAcad">   
-        <div class="col-2 offset-1">
+    <!-- Prima columna offset de margen, dos col siguientes: logo institucional; nueve: descripción laboral. Total cuatro experiencias laborales de interés -->
+    <div class="row align-items-center border-top my-2" id="tutorAcademico">   
+        <div class="col-2 offset-1 d-flex justify-content-center">
             <img class="img-fluid logoInstitucional" src="../../../assets/img/logos/freelancer-logo.jpg" alt="Logo freelance">
         </div>                           
-        <div class="col-9 border-top pt-2">
+        <div class="col-9 pt-2">
             <ul>
-                <h4 class="cargo mt-2">Tutor Académico</h4>
-                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button>
-                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
+                <h4 class="cargo">Tutor Académico</h4>
+                <!-- ============================================= -->
+                <!-- BOTONES: Editar y eliminar Experiencia laboral. -->
+                <!-- ============================================= -->
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#eliminaExperienciaModal"><i class="fa fa-trash"></i></button>
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editaExperienciaModal"><i class="fa fa-pen-to-square"></i></button>
+                <!-- ============================================= -->
+                <!-- Datos de la Experiencia laboral. -->
+                <!-- ============================================= -->
                 <li class="sede">Freelance</li>
-                <li class="fecha">may 2017 - actualidad</li>
-                <li class="ubicacion"><span class="ciudad">Capital Federal, </span><span class="pais">Argentina</span></li>
+                <li class="fecha">
+                    <span class="fechaInicio" >mayo 2018</span> - 
+                    <span class="fechaFin">actualidad</span>
+                </li>
+                <li class="ubicacion">
+                    <span class="ciudad">CABA</span> - 
+                    <span class="estado">Capital Federal</span>
+                    <span class="pais">Argentina</span>
+                </li>
             </ul>
         </div>
     </div>
 
-    <div class="row align-items-center" id="profeUniv1">   
-        <div class="col-2 offset-1">
+    <div class="row align-items-center border-top my-2" id="profUniversitario1">   
+        <div class="col-2 offset-1 d-flex justify-content-center">
             <img class="img-fluid" src="../../../assets/img/logos/logo_ula.jpg" alt="Logo ULA">
         </div>                           
-        <div class="col-9 border-top pt-2">
+        <div class="col-9 pt-2">
             <ul>
-                <h4 class="mt-2">Profesor Universitario</h4>
-                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button>
-                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
+                <h4 class="cargo">Profesor Universitario</h4>
+                <!-- ============================================= -->
+                <!-- BOTONES: Editar y eliminar Experiencia laboral. -->
+                <!-- ============================================= -->
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#eliminaExperienciaModal"><i class="fa fa-trash"></i></button>
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editaExperienciaModal"><i class="fa fa-pen-to-square"></i></button>
+                <!-- ============================================= -->
+                <!-- Datos de la Experiencia laboral. -->
+                <!-- ============================================= -->
                 <li class="sede">Universidad de Los Andes (ULA)</li>
-                <li class="fecha">may 2013 - mar 2018</li>
-                <li class="lugar">San Cristóbal, Táchira, Venezuela</li>
+                <li class="fecha">
+                    <span class="fechaInicio">mayo 2013</span> - 
+                    <span class="fechaFin">marzo 2018</span>
+                </li>
+                <li class="ubicacion">
+                    <span class="ciudad">San Cristóbal</span> - 
+                    <span class="estado">Táchira</span> - 
+                    <span class="pais">Venezuela</span>
+                </li>
             </ul>
         </div>
     </div>
 
-    <div class="row align-items-center" id="coordPast">   
-        <div class="col-2 offset-1" id="logo3">
+    <div class="row align-items-center border-top my-2" id="coordinadorPastoral">   
+        <div class="col-2 offset-1 d-flex justify-content-center">
             <img class="img-fluid" src="../../../assets/img/logos/fe-y-alegria-log.jpg" alt="Logo Fe y Alegría">
         </div>                           
-        <div class="col-9 border-top pt-2">
+        <div class="col-9 pt-2">
             <ul>
-                <h4 class="mt-2">Coordinador de Pastoral</h4>
-                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button>
-                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
+                <h4 class="cargo">Coordinador de Pastoral</h4>
+                <!-- ============================================= -->
+                <!-- BOTONES: Editar y eliminar Experiencia laboral. -->
+                <!-- ============================================= -->
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#eliminaExperienciaModal"><i class="fa fa-trash"></i></button>
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editaExperienciaModal"><i class="fa fa-pen-to-square"></i></button>
+                <!-- ============================================= -->
+                <!-- Datos de la Experiencia laboral. -->
+                <!-- ============================================= -->
                 <li class="sede">Colegio Fe y Alegría "Pbro. Rubén Darío Mora"</li>
-                <li class="fecha">oct 2011 - ago 2013</li>
-                <li class="lugar">Naranjales, Táchira, Venezuela</li>
+                <li class="fecha">
+                    <span class="fechaInicio">octubre 2011</span> - 
+                    <span class="fechaFin">agosto 2018</span>
+                </li>
+                <li class="ubicacion">
+                    <span class="ciudad">Naranjales</span> - 
+                    <span class="estado">Táchira</span> - 
+                    <span class="pais">Venezuela</span>
+                </li>
             </ul>
         </div>
     </div>
 
-    <div class="row align-items-center" id="profeUniv2">   
-        <div class="col-2 offset-1">
+    <div class="row align-items-center border-top my-2" id="profesorUniversitario2">   
+        <div class="col-2 offset-1 d-flex justify-content-center">
             <img class="img-fluid" src="../../../assets/img/logos/logo-iuesta.jpg" alt="Logo IUESTA">
         </div>                           
-        <div class="col-9 border-top pt-2">
+        <div class="col-9 pt-2">
             <ul>
-                <h4 class="mt-2">Profesor Universitario</h4>
-                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button>
-                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
+                <h4 class="cargo my-2">Profesor Universitario</h4>
+                <!-- ============================================= -->
+                <!-- BOTONES: Editar y eliminar Experiencia laboral. -->
+                <!-- ============================================= -->
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#eliminaExperienciaModal"><i class="fa fa-trash"></i></button>
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editaExperienciaModal"><i class="fa fa-pen-to-square"></i></button>
+                <!-- ============================================= -->
+                <!-- Datos de la Experiencia laboral. -->
+                <!-- ============================================= -->
                 <li class="sede">Instituto Universitario Eclesiástico "Santo Tomás de Aquino" (IUESTA)</li>
-                <li class="fecha">feb 2007 - ago 2011</li>
-                <li class="lugar">Palmira, Táchira, Venezuela</li>
+                <li class="fecha">
+                    <span class="fechaInicio">febrero 2007</span> - 
+                    <span class="fechaFin">agosto 2011</span>
+                </li>
+                <li class="ubicacion">
+                    <span class="ciudad">Palmira</span> - 
+                    <span class="estado">Táchira</span> - 
+                    <span class="pais">Venezuela</span>
+                </li>
             </ul>
         </div>
     </div>
 </div>
 
 <!-- ============================================= -->
-<!-- MODAL Agregar Experiencia -->
+<!-- MODAL Agregar Experiencia Laboral. -->
 <!-- ============================================= -->
 <div class="modal fade" id="addExperienciaModal" tabindex="-1" aria-labelledby="addExperienciaModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="addExperienciaModalLabel">Agrega nueva experiencia laboral</h1>
+                <h1 class="modal-title fs-5" id="addExperienciaModalLabel">Agrega nueva Experiencia Laboral</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <!-- ============================================= -->
-                <!-- FORMULARIO: Agregar Experiencia -->
+                <!-- FORMULARIO: Agregar Experiencia Laboral. -->
                 <!-- ============================================= -->
                 <form>
                     <div class="mb-3">
-                        <label for="logoInstitucional" class="form-label">Logo de la empresa:</label>
+                        <label for="logoInstitucional" class="form-label">Logo de la Empresa:</label>
                         <input type="url" placeholder="Inserte URL del logo" id="logoInstitucional" alt="Logo de la empresa" class="form-control" required>
                     </div>
                     <div class="mb-3">
@@ -96,19 +154,27 @@
                         <input type="text" placeholder="Ingrese su cargo u ocupación" id="cargo" name="cargo" class="form-control" required>
                     </div>
                     <div class="mb-3">
-                        <label for="fechaInicial" class="form-label">Fecha de inicio:</label>
-                        <input type="date" placeholder="Ingrese fecha de inicio" id="fechaInicial" name="fechaInicial" class="form-control" required>
+                        <label for="fechaInicio" class="form-label">Fecha de inicio:</label>
+                        <input type="month" id="fechaInicio" name="fechaInicio" class="form-control" required>
                     </div>
                     <div class="mb-3">
-                        <label for="fechaTerminal" class="form-label">Fecha de culminación:</label>
-                        <input type="date" placeholder="Ingrese fecha de finalización" id="fechaTerminal" name="fechaInicial" class="form-control" required>
+                        <label for="fechaFin" class="form-label">Fecha de culminación:</label>
+                        <input type="month" id="fechaFin" name="fechaFin" class="form-control" required>
                     </div>
                     <div class="mb-3">
-                        <label for="ubicacion" class="form-label">Ciudad, País:</label>
-                        <input type="text" placeholder="Ingrese ciudad y país" id="ubicacion" name="ubicacion" class="form-control" required>
+                        <label for="ciudad" class="form-label">Ciudad:</label>
+                        <input type="text" placeholder="Ingrese Ciudad" id="ciudad" name="ubicacion" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="estado" class="form-label">Estado o Provincia:</label>
+                        <input type="text" placeholder="Ingrese Estado o Provincia" id="estado" name="ubicacion" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pais" class="form-label">País:</label>
+                        <input type="text" placeholder="Ingrese País" id="pais" name="ubicacion" class="form-control" required>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                         <!-- ============================================= -->
                         <!-- Botón del formulario -->
                         <!-- ============================================= -->
@@ -121,42 +187,80 @@
 </div>
 
 <!-- ============================================= -->
-<!-- MODAL Editar Experiencia. -->
+<!-- MODAL Eliminar Experiencia laboral. -->
 <!-- ============================================= -->
-<div class="modal fade" id="editaPerfilModal" tabindex="-1" aria-labelledby="editaPerfilModalLabel" aria-hidden="true">
+<div class="modal fade" id="eliminaExperienciaModal" tabindex="-1" aria-labelledby="eliminaExperienciaModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="editaPerfilModalLabel">Edita tu perfil</h1>
+                <h1 class="modal-title fs-5" id="eliminaExperienciaModalLabel">Elimina Experiencia Laboral</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ¿Deseas eliminar esta experiencia laboral?
+                <form>
+                    <div class="modal-footer mt-3">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-trash me-1"></i>Eliminar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- MODAL Editar Experiencia laboral. -->
+<!-- ============================================= -->
+<div class="modal fade" id="editaExperienciaModal" tabindex="-1" aria-labelledby="editaExperienciaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="editaExperienciaModalLabel">Edita Experiencia Laboral</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <!-- ============================================= -->
-                <!-- FORMULARIO Perfil -->
+                <!-- FORMULARIO: Editar Experiencia Laboral. -->
                 <!-- ============================================= -->
                 <form>
                     <div class="mb-3">
-                        <label for="fotoPerfil" class="form-label">Foto del perfil:</label>
-                        <input type="url" placeholder="Inserte URL de la foto" id="fotoPerfil" name="fotoPerfil" class="form-control" required>
+                        <label for="logoInstitucional" class="form-label">Logo de la Empresa:</label>
+                        <input type="url" placeholder="Inserte URL del logo" id="logoInstitucional" alt="Logo de la empresa" class="form-control" required>
                     </div>
                     <div class="mb-3">
-                        <label for="nombresApellidos" class="form-label">Nombres / Apellidos:</label>
-                        <input type="text" placeholder="Ingrese su(s) Nombre(s) y Apellido(s)" id="nombresApellidos" name="identidad" class="form-control" required>
+                        <label for="cargo" class="form-label">Cargo u ocupación:</label>
+                        <input type="text" placeholder="Ingrese su cargo u ocupación" id="cargo" name="cargo" class="form-control" required>
                     </div>
                     <div class="mb-3">
-                        <label for="ocupacion" class="form-label">Ocupación:</label>
-                        <input type="text" placeholder="Ingrese su ocupación actual" id="ocupacion" name="ocupacion" class="form-control" required>
+                        <label for="fechaInicio" class="form-label">Fecha de inicio:</label>
+                        <input type="month" id="fechaInicio" name="fechaInicio" class="form-control" required>
                     </div>
                     <div class="mb-3">
-                        <label for="descripcionSobreMi" class="form-label">Sobre Mí:</label>
-                        <textarea type="text" placeholder="Ingrese descripción" id="descripcionSobreMi" name="descripcionSobreMi" class="form-control" required></textarea>
+                        <label for="fechaFin" class="form-label">Fecha de culminación:</label>
+                        <input type="month" id="fechaFin" name="fechaFin" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ciudad" class="form-label">Ciudad:</label>
+                        <input type="text" placeholder="Ingrese Ciudad" id="ciudad" name="ubicacion" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="estado" class="form-label">Estado o Provincia:</label>
+                        <input type="text" placeholder="Ingrese Estado o Provincia" id="estado" name="ubicacion" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pais" class="form-label">País:</label>
+                        <input type="text" placeholder="Ingrese País" id="pais" name="ubicacion" class="form-control" required>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                         <!-- ============================================= -->
                         <!-- Botón del formulario -->
                         <!-- ============================================= -->
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
                     </div>
                 </form>
             </div>

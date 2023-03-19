@@ -1,65 +1,253 @@
 <div class="container" id="education">
+    <!-- ============================================= -->
+    <!-- Educación. -->
+    <!-- ============================================= -->
     <div class="row">
         <div class="col">
             <h2>Educación</h2>
-            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-circle-plus"></i></button>
+            <!-- ============================================= -->
+            <!-- BOTÓN: Agregar Título Académico. -->
+            <!-- ============================================= -->
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addEducacionModal"><i class="fa fa-circle-plus"></i></button>
         </div>
     </div>
 
     <!-- Prima columna offset de margen, las dos siguientes: imagen institucional, nueve: descripción académica. Total cuatro academias de interés -->
-    <div class="row align-items-center" id="psicologia">   
-        <div class="col-2 offset-1">
+    <div class="row align-items-center border-top my-2" id="psicologia">   
+        <div class="col-2 offset-1 d-flex justify-content-center">
             <img class="img-fluid" src="../../../assets/img/logos/Logo-UBA.png" alt="Logo UBA">
         </div>                           
-        <div class="col-9 border-top pt-2">
+        <div class="col-9 pt-2">
             <ul>
-                <h4 class="mt-2">Universidad de Buenos Aires(UBA)</h4>
-                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button><button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
+                <h4 class="mt-2 institucion">Universidad de Buenos Aires (UBA)</h4>
+                <!-- ============================================= -->
+                <!-- BOTONES: Editar y eliminar Título Académico. -->
+                <!-- ============================================= -->
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#eliminaEducacionModal"><i class="fa fa-trash"></i></button>
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editaEducacionModal"><i class="fa fa-pen-to-square"></i></button>
                 <li class="profesion">Licenciado en Psicología</li>
-                <li class="fecha">2021-en curso (Se detiene la cursada para dedicar mayor tiempo a programación)</li>
+                <li class="fecha">
+                    <span class="fechaInicio" >mayo 2018</span> - 
+                    <span class="fechaFin">actualidad</span>
+                </li>
+                <li class="ubicacion">
+                    <span class="estado">Capital Federal</span> - 
+                    <span class="pais">Argentina</span>
+                </li>
             </ul>
         </div>
     </div>
 
-    <div class="row align-items-center" id="filosofia">   
-        <div class="col-2 offset-1" id="logo3">
+    <div class="row align-items-center border-top my-2" id="filosofia">   
+        <div class="col-2 offset-1 d-flex justify-content-center">
             <img class="img-fluid" src="../../../assets/img/logos/logo-iuesta.jpg" alt="Logo IUESTA">
         </div>                           
-        <div class="col-9 border-top pt-2">
+        <div class="col-9 pt-2">
             <ul>
-                <h4 class="mt-2">IUESTA</h4>
-                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button><button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
+                <h4 class="mt-2 institucion">IUESTA</h4>
+                <!-- ============================================= -->
+                <!-- BOTONES: Editar y eliminar Título Académico. -->
+                <!-- ============================================= -->
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#eliminaEducacionModal"><i class="fa fa-trash"></i></button>
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editaEducacionModal"><i class="fa fa-pen-to-square"></i></button>
                 <li class="profesion">Licenciado en Educación Mención Filosofía</li>
-                <li class="fecha">1999-2001 / 2009-2011</li>
+                <li class="fecha">
+                    <span class="fechaInicio">octubre 1999</span> - 
+                    <span class="fechaFin">agosto 2011</span>
+                </li>
+                <li class="ubicacion">
+                    <span class="estado">Táchira</span> - 
+                    <span class="pais">Venezuela</span>
+                </li>
             </ul>
         </div>
     </div>
 
-    <div class="row align-items-center" id="bach-pontificio">   
-        <div class="col-2 offset-1">
+    <div class="row align-items-center border-top my-2" id="bach-pontificio">   
+        <div class="col-2 offset-1 d-flex justify-content-center">
             <img class="img-fluid" src="../../../assets/img/logos/Javeriana.png" alt="Logo Javeriana">
         </div>                           
-        <div class="col-9 border-top pt-2">
+        <div class="col-9 pt-2">
             <ul>
-                <h4 class="mt-2">Universidad Javeriana de Bogotá</h4>
-                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button><button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
+                <h4 class="mt-2 institucion">Universidad Javeriana</h4>
+                <!-- ============================================= -->
+                <!-- BOTONES: Editar y eliminar Título Académico. -->
+                <!-- ============================================= -->
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#eliminaEducacionModal"><i class="fa fa-trash"></i></button>
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editaEducacionModal"><i class="fa fa-pen-to-square"></i></button>
                 <li class="profesion">Baccalaureum in Theologiae</li>
-                <li class="fecha">2007</li>
+                <li class="fecha">
+                    <span class="fechaInicio">octubre 2003</span> - 
+                    <span class="fechaFin">agosto 2007</span>
+                </li>
+                <li class="ubicacion">
+                    <span class="estado">Bogotá</span> - 
+                    <span class="pais">Colombia</span>
+                </li>
             </ul>
         </div>
     </div>
 
-    <div class="row align-items-center" id="teologia">   
-        <div class="col-2 offset-1">
+    <div class="row align-items-center border-top my-2" id="teologia">   
+        <div class="col-2 offset-1 d-flex justify-content-center">
             <img class="img-fluid" src="../../../assets/img/logos/logo-iuesta.jpg" alt="Logo IUESTA">
         </div>                           
-        <div class="col-9 border-top pt-2">
+        <div class="col-9 pt-2">
             <ul>
-                <h4 class="mt-2">IUESTA</h4>
-                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button><button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
+                <h4 class="mt-2 institucion">IUESTA</h4>
+                <!-- ============================================= -->
+                <!-- BOTONES: Editar y eliminar Título Académico. -->
+                <!-- ============================================= -->
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#eliminaEducacionModal"><i class="fa fa-trash"></i></button>
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editaEducacionModal"><i class="fa fa-pen-to-square"></i></button>
                 <li class="profesion">Licenciado en Teología</li>
-                <li class="fecha">2003-2007</li>
+                <li class="fecha">
+                    <span class="fechaInicio">octubre 2003</span> - 
+                    <span class="fechaFin">agosto 2007</span>
+                </li>
+                <li class="ubicacion">
+                    <span class="estado">Táchira</span> - 
+                    <span class="pais">Venezuela</span>
+                </li>
             </ul>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- MODAL Agregar Estudio. -->
+<!-- ============================================= -->
+<div class="modal fade" id="addEducacionModal" tabindex="-1" aria-labelledby="addEducacionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addEducacionModalLabel">Agrega nuevo Título Académico</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- ============================================= -->
+                <!-- FORMULARIO: Agregar Título Académico -->
+                <!-- ============================================= -->
+                <form>
+                    <div class="mb-3">
+                        <label for="logoInstitucional" class="form-label">Logo de la Institución:</label>
+                        <input type="url" placeholder="Inserte URL del logo" id="logoInstitucional" alt="Logo de la Institución" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="institucion" class="form-label">Institución:</label>
+                        <input type="text" placeholder="Ingrese nombre de la Institución" id="institucion" name="institución" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaInicio" class="form-label">Fecha de inicio:</label>
+                        <input type="month" id="fechaInicio" name="fechaInicio" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaFin" class="form-label">Fecha de culminación:</label>
+                        <input type="month" id="fechaFin" name="fechaFin" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ciudad" class="form-label">Ciudad:</label>
+                        <input type="text" placeholder="Ingrese Ciudad" id="ciudad" name="ubicacion" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="estado" class="form-label">Estado o Provincia:</label>
+                        <input type="text" placeholder="Ingrese Estado o Provincia" id="estado" name="ubicacion" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pais" class="form-label">País:</label>
+                        <input type="text" placeholder="Ingrese País" id="pais" name="ubicacion" class="form-control" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- MODAL Eliminar Estudio. -->
+<!-- ============================================= -->
+<div class="modal fade" id="eliminaEducacionModal" tabindex="-1" aria-labelledby="eliminaEducacionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="eliminaEducacionModalLabel">Elimina Estudio</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ¿Deseas eliminar tu estudio?
+                <form>
+                    <div class="modal-footer mt-3">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-trash me-1"></i>Eliminar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- MODAL Editar Estudio. -->
+<!-- ============================================= -->
+<div class="modal fade" id="editaEducacionModal" tabindex="-1" aria-labelledby="editaEducacionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="editaEducacionModalLabel">Edita Estudio</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- ============================================= -->
+                <!-- FORMULARIO: Editar Experiencia -->
+                <!-- ============================================= -->
+                <form>
+                    <div class="mb-3">
+                        <label for="logoInstitucional" class="form-label">Logo de la Institución:</label>
+                        <input type="url" placeholder="Inserte URL del logo" id="logoInstitucional" alt="Logo de la Institución" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="institucion" class="form-label">Institución:</label>
+                        <input type="text" placeholder="Ingrese nombre de la Institución" id="institucion" name="institución" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaInicio" class="form-label">Fecha de inicio:</label>
+                        <input type="month" id="fechaInicio" name="fechaInicio" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaFin" class="form-label">Fecha de culminación:</label>
+                        <input type="month" id="fechaFin" name="fechaFin" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ciudad" class="form-label">Ciudad:</label>
+                        <input type="text" placeholder="Ingrese Ciudad" id="ciudad" name="ubicacion" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="estado" class="form-label">Estado o Provincia:</label>
+                        <input type="text" placeholder="Ingrese Estado o Provincia" id="estado" name="ubicacion" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pais" class="form-label">País:</label>
+                        <input type="text" placeholder="Ingrese País" id="pais" name="ubicacion" class="form-control" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
