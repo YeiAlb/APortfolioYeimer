@@ -5,14 +5,20 @@
             <!-- Imagen de Perfil. -->
             <!-- ============================================= -->
             <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" id="contenedor-perfil">
-                <img src="../../../assets/img/Foto de perfil.jpg" class="img-fluid img-thumbnail" id="imgPerfil" alt="Foto de Perfil">
+                <img [src]="miPortfolio.foto" class="img-fluid img-thumbnail" id="imgPerfil" alt="Foto de Perfil">
             </div>
             <div class="col-xs-12 col-sm-8 col-md-9 col-lg-10">
-                <h1 class="mt-2">Yeimer Alberto Márquez</h1>
+                <h1 class="mt-2">
+                    <span class="nombres">{{miPortfolio.nombre}} </span>
+                    <span class="apellidos">{{miPortfolio.apellido}}</span>
+                </h1>
+                <!-- ============================================= -->
+                <!-- BOTÓN (Trigger Modal): Editar Sobre Mí. -->
+                <!-- ============================================= -->
                 <button type="button" class="btn btn-light" id="btnEditarPerfil" data-bs-toggle="modal" data-bs-target="#editaPerfilModal"><i class="fa fa-pen-to-square"></i></button>
-                <h3 class="mb-4"> Full Stack Developer Jr.</h3>
+                <h3 id="ocupacion" class="mb-4">{{miPortfolio.ocupacion}}</h3>
                 <h4>Sobre Mí</h4>
-                <p class="mt-2 me-2">Educador con experiencia en docencia universitaria; habilidades organizativas, liderazgo de grupos, conocimiento sobre diversos programas básicos de Microsoft Office, uso de algunas plataformas de aula virtual, aprendizaje continuo sobre <b>programación y desarrollo WEB</b>.</p>
+                <p id="descripcion" class="mt-2 me-2">{{miPortfolio.descripcion}}.</p>
             </div>
         </div>
     </div>
@@ -38,7 +44,11 @@
                         <input type="url" placeholder="Inserte URL de la foto" id="fotoPerfil" name="fotoPerfil" class="form-control" required>
                     </div>
                     <div class="mb-3">
-                        <label for="nombresApellidos" class="form-label">Nombres / Apellidos:</label>
+                        <label for="nombres" class="form-label">Nombre(s):</label>
+                        <input type="text" placeholder="Ingrese su(s) Nombre(s) y Apellido(s)" id="nombresApellidos" name="identidad" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="apellidos" class="form-label"> Apellido(s):</label>
                         <input type="text" placeholder="Ingrese su(s) Nombre(s) y Apellido(s)" id="nombresApellidos" name="identidad" class="form-control" required>
                     </div>
                     <div class="mb-3">

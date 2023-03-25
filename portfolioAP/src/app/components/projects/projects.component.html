@@ -1,8 +1,14 @@
 <div class="container" id="projects">
+    <!-- ============================================= -->
+    <!-- Proyecto. -->
+    <!-- ============================================= -->
     <div class="row">
         <div class="col proyectos">
             <h2>Proyectos</h2>
-            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-circle-plus"></i></button>
+            <!-- ============================================= -->
+            <!-- BOTÓN (Trigger Modal: Agregar Proyecto. -->
+            <!-- ============================================= -->
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addProyectoModal"><i class="fa fa-circle-plus"></i></button>
         </div>
     </div>
 
@@ -20,10 +26,13 @@
                             <p class="card-text">Proyecto creado dentro del Programa Oracle-Alura Latam.</p>
                             <p class="card-text"><small class="text-muted">Alura Latam</small></p>
                         </div>
+                        <!-- ============================================= -->
+                        <!-- BOTONES (Trigger Modal): Editar y eliminar Experiencia laboral. -->
+                        <!-- ============================================= -->
                         <div class="buttons-one-proyect">
                             <a href="https://github.com/YeiAlb/Barber-a-Alura" class="btn btn-outline-secondary btn-sm me-3" target="_blank">Descúbrelo</a>
-                            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button>
-                            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
+                            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#eliminaProyectoModal"><i class="fa fa-trash"></i></button>
+                            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editaProyectoModal"><i class="fa fa-pen-to-square"></i></button>
                         </div>
                     </div>
                 </div>
@@ -44,8 +53,8 @@
                         </div>
                         <div class="buttons-one-proyect">
                             <a href="https://github.com/YeiAlb/Challenge_Oracle_Decoder" class="btn btn-outline-secondary btn-sm me-3" target="_blank">Descúbrelo</a>
-                            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button>
-                            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
+                            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#eliminaProyectoModal"><i class="fa fa-trash"></i></button>
+                            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editaProyectoModal"><i class="fa fa-pen-to-square"></i></button>
                         </div>
                     </div>
                 </div>
@@ -96,5 +105,119 @@
             </div>
         </div>
 
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- MODAL Agregar Proyecto. -->
+<!-- ============================================= -->
+<div class="modal fade" id="addProyectoModal" tabindex="-1" aria-labelledby="addProyectoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addProyectoModalLabel">Agrega nuevo Proyecto</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- ============================================= -->
+                <!-- FORMULARIO: Agregar Proyecto. -->
+                <!-- ============================================= -->
+                <form>
+                    <div class="mb-3">
+                        <label for="imgProyecto" class="form-label">Imagen del Proyecto:</label>
+                        <input type="url" placeholder="Inserte URL de la imagen" id="imgProyecto" alt="Logo de la empresa" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="titleProyecto" class="form-label">Título del Proyecto:</label>
+                        <input type="text" placeholder="Ingrese nombre del Proyecto" id="titleProyecto" name="tituloProyecto" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="proveedorProyecto" class="form-label">Propiedad del Proyecto:</label>
+                        <input type="text" placeholder="Nombre del proveedor del proyecto" id="proveedorProyecto" name="proveedorProyecto" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcionProyecto" class="form-label">Sobre el Proyecto:</label>
+                        <textarea type="text" placeholder="Ingrese breve descripción del Proyecto " id="descripcionProyecto" name="descripcionProyecto" class="form-control" required></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- MODAL Eliminar Proyecto. -->
+<!-- ============================================= -->
+<div class="modal fade" id="eliminaProyectoModal" tabindex="-1" aria-labelledby="eliminaProyectoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="eliminaProyectoModalLabel">Elimina Proyecto</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ¿Deseas eliminar Proyecto?
+                <form>
+                    <div class="modal-footer mt-3">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-trash me-1"></i>Eliminar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- MODAL Editar Proyecto. -->
+<!-- ============================================= -->
+<div class="modal fade" id="editaProyectoModal" tabindex="-1" aria-labelledby="editaProyectoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="editaProyectoModal|Label">Edita Proyecto</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- ============================================= -->
+                <!-- FORMULARIO: Edita Proyecto. -->
+                <!-- ============================================= -->
+                <form>
+                    <div class="mb-3">
+                        <label for="imgProyecto" class="form-label">Imagen del Proyecto:</label>
+                        <input type="url" placeholder="Inserte URL de la imagen" id="imgProyecto" alt="Logo de la empresa" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="titleProyecto" class="form-label">Título del Proyecto:</label>
+                        <input type="text" placeholder="Ingrese nombre del Proyecto" id="titleProyecto" name="tituloProyecto" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="proveedorProyecto" class="form-label">Propiedad del Proyecto:</label>
+                        <input type="text" placeholder="Nombre del proveedor del proyecto" id="proveedorProyecto" name="proveedorProyecto" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcionProyecto" class="form-label">Sobre el Proyecto:</label>
+                        <textarea type="text" placeholder="Ingrese breve descripción del Proyecto " id="descripcionProyecto" name="descripcionProyecto" class="form-control" required></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>

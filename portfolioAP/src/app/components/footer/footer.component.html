@@ -1,8 +1,55 @@
 <footer class="container-fluid text-center mt-3 p-4" id="footer">
-  <div class="align-items-center py-3 my-4 border-top">
+  <div class="align-items-center py-3 my-4 border-top" id="contenedorFooter">
     <div class="col-12 align-items-center">
       <img id="logoYAMR" class="text-muted text-decoration-none lh-1" width="30" height="24" src="../../../assets/img/logos/Logo-YAMR.jpg">
       <span class="copyright mb-3 mb-md-0 mx-3">&copy; Copyright - 2023 - Y_kAdyMa_R</span>
+      <!-- ============================================= -->
+      <!-- BOTONES (Trigger Modal): Editar Footer. -->
+      <!-- ============================================= -->
+      <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editaFooterModal"><i class="fa fa-pen-to-square"></i></button>
     </div>
   </div>
+  
+
 </footer>
+
+<!-- ============================================= -->
+<!-- MODAL Haeder & Footer -->
+<!-- ============================================= -->
+<div class="modal fade" id="editaFooterModal" tabindex="-1" aria-labelledby="editaFooterModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h1 class="modal-title fs-5" id="editaFooterModalLabel">Edición Footer</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <!-- ============================================= -->
+              <!-- FORMULARIO: Editar Header -->
+              <!-- ============================================= -->
+              <form>
+                <div class="mb-3">
+                  <label for="logoFooter" class="form-label">Logo del footer:</label>
+                  <input type="url" placeholder="URL del logo" id="logoFooter" alt="Logo del footer" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="fechaEdicion" class="form-label">Año de edición:</label>
+                    <input type="month" id="fechaEdicion"
+                    placeholder="Mes y Año de edición" name="fechaEdicion" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                  <label for="editado" class="form-label">Editado por:</label>
+                  <input type="text" placeholder="Realizador del Proyecto" id="editado" name="editado" class="form-control">
+                </div>                 
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <!-- ============================================= -->
+                    <!-- Botón del formulario -->
+                    <!-- ============================================= -->
+                    <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
+                </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>

@@ -10,6 +10,10 @@ footer {
     color: #FFFFFF;
     font-size: 13px;
 }
+button {
+    float: right;
+    background-color: transparent;
+}
 
 @media (max-width: 350px) {
     .copyright {

@@ -1,0 +1,275 @@
+{
+    "personas": {
+        "banner": "https://i.ibb.co/py4QLYZ/Banner-luz.jpg",
+        "nombre": "Yeimer Alberto",
+        "apellido": "Márquez Rojas",
+        "foto": "../assets/img/Foto de perfil.jpg",
+        "email": "mr.yeimeralberto@gmail.com",
+        "ocupacion": "Full Stack Developer Jr",
+        "descripcion": "Educador con experiencia en docencia universitaria; habilidades organizativas, liderazgo de grupos, conocimiento sobre diversos programas básicos de Microsoft Office, uso de algunas plataformas de aula virtual, aprendizaje continuo sobre <b>programación y desarrollo WEB</b>."
+    },
+    
+    "redes": [
+        {
+            "id": 1,
+            "redSocial": "Github",
+            "url": "https://github.com/YeiAlb/",
+            "icono": "fa-brands fa-github"
+        },
+        {
+            "id": 2,
+            "redSocial": "LinkedIn",
+            "url": "https://www.linkedin.com/in/yeimer-alberto-marquez-rojas-5a9568134//",
+            "icono": "fa-brands fa-linkedin"
+        },
+        {
+            "id": 3,
+            "redSocial": "Twitter",
+            "url": "https://twitter.com/YeimerAlberto/",
+            "icono": "fa-brands fa-twitter"
+        }
+    ],
+
+    "trabajos": [
+        {
+            "id": 1,
+            "logoEmpresarial": "../assets/img/logos/freelancer-logo.jpg",
+            "url": "",
+            "cargo": "Tutor Académico",
+            "sede": "Freelance",
+            "fecha": {
+                "fechaInicio": "mayo 2018",
+                "fechaFin": "--"
+                },
+            "ubicacion": {
+                "ciudad": "CABA",
+                "estado": "Capital Federal",
+                "pais": "Argentina"
+            }
+        },
+        {
+            "id": 2,
+            "logoEmpresarial": "../assets/img/logos/logo_ula.jpg",
+            "url": "http://www.ula.ve/index.php",
+            "cargo": "Profesor Universitario",
+            "sede": "Universidad de Los Andes (ULA) Nucleo 'Pedro Rincón Gutiérrez'",
+            "fecha": {
+                "fechaInicio": "mayo 2013",
+                "fechaFin": "marzo 2018"
+                },
+            "ubicacion": {
+                "ciudad": "San Cristóbal",
+                "estado": "Táchira ",
+                "pais": "Venezuela"
+            }
+        },
+        {
+            "id": 3,
+            "logoEmpresarial": "../assets/img/logos/fe-y-alegria-log.jpg",
+            "url": "https://www.feyalegria.org/venezuela/",
+            "cargo": "Coordinador de Pastoral",
+            "sede": "Colegio Fe y Alegría 'Pbro. Rubén Darío Mora'",
+            "fecha": {
+                "fechaInicio": "octubre 2011",
+                "fechaFin": "agosto 2013"
+                },
+            "ubicacion": {
+                "ciudad": "Naranjales",
+                "estado": "Táchira",
+                "pais": "Venezuela"
+            }
+        },
+        {
+            "id": 4,
+            "logoEmpresarial": "../assets/img/logos/logo-iuesta.jpg",
+            "url": "https://www.instagram.com/iuesta1/?hl=en",
+            "cargo": "Profesor Universitario",
+            "sede": "Instituto Universitario Eclesiástico 'Santo Tomás de Aquino' (IUESTA)",
+            "fecha": {
+                "fechaInicio": "febrero 2007",
+                "fechaFin": "agosto 2011"
+                },
+            "ubicacion": {
+                "ciudad": "Palmira",
+                "estado": "Táchira",
+                "pais": "Venezuela"
+            }
+        }
+    ],
+
+    "estudios": [
+        {
+            "id": 1,
+            "logoInstitucional": "../assets/img/logos/Logo-UBA.png",
+            "url": "https://www.psi.uba.ar/",
+            "profesion": "Licenciado en Psicología",
+            "sede": "Universidad de Buenos Aires (UBA)",
+            "fecha": {
+                "fechaInicio": "marzo 2021",
+                "fechaFin": ""
+                },
+            "ubicacion": {
+                "estado": "Capital Federal",
+                "pais": "Argentina"
+            }
+        },
+        {
+            "id": 2,
+            "logoInstitucional": "../assets/img/logos/logo-iuesta.jpg",
+            "url": "https://www.instagram.com/iuesta1/?hl=en",
+            "profesion": "Licenciado en Educación Mención Filosofía",
+            "sede": "IUESTA",
+            "fecha": {
+                "fechaInicio": "octubre 1999",
+                "fechaFin": "agosto 2011"
+                },
+            "ubicacion": {
+                "estado": "Táchira",
+                "pais": "Venezuela"
+            }
+        },
+        {
+            "id": 3,
+            "logoInstitucional": "../assets/img/logos/Javeriana.png",
+            "url": "https://www.javeriana.edu.co/inicio",
+            "profesion": "Baccalaureum in Theologiae",
+            "sede": "Universidad Javeriana",
+            "fecha": {
+                "fechaInicio": "",
+                "fechaFin": "agosto 2007"
+                },
+            "ubicacion": {
+                "estado": "Bogotá",
+                "pais": "Venezuela"
+            }
+        },
+        {
+            "id": 4,
+            "logoInstitucional": "../assets/img/logos/logo-iuesta.jpg",
+            "url": "https://www.instagram.com/iuesta1/?hl=en",
+            "profesion": "Licenciado en Teología",
+            "sede": "IUESTA",
+            "fecha": {
+                "fechaInicio": "octubre 2003",
+                "fechaFin": "agosto 2007"
+                },
+            "ubicacion": {
+                "estado": "Táchira",
+                "pais": "Venezuela"
+            }
+        }
+    ],
+
+    "skills": {
+        "hardSkills": [
+            {
+                "id": 1,
+                "titleHardSKill": "HTML",
+                "porcentaje": 65
+            },
+            {
+                "id": 2,
+                "titleHardSKill": "CSS",
+                "porcentaje": 55
+            },
+            {
+                "id": 3,
+                "titleHardSKill": "JavaScript",
+                "porcentaje": 45
+            },{
+                "id": 4,
+                "titleHardSKill": "GIT",
+                "porcentaje": 65
+            },
+            {
+                "id": 5,
+                "titleHardSKill": "Bootstrap",
+                "porcentaje": 45
+            },
+            {
+                "id": 6,
+                "titleHardSKill": "Angular",
+                "porcentaje": 40
+            }
+        ],
+        "softSkills": [
+            {
+                "id": 1,
+                "titleSoftSkill": "Scrum Master",
+                "porcentaje": 40
+            },
+            {
+                "id": 2,
+                "titleSoftSkill": "Liderazgo, Coordinación y Trabajo en Equipo",
+                "porcentaje": 80
+            },
+            {
+                "id": 3,
+                "titleSoftSkill": "Inteligencia y Pensamiento Crítico",
+                "porcentaje": 90
+            },
+            {
+                "id": 4,
+                "titleSoftSkill": "Capacidad resolutiva de problemas",
+                "porcentaje": 80
+            },
+            {
+                "id": 5,
+                "titleSoftSkill": "Comunicación asertiva",
+                "porcentaje": 65
+            },
+            {
+                "id": 6,
+                "titleSoftSkill": "Actitud y Empatía",
+                "porcentaje": 90
+            },
+            {
+                "id": 7,
+                "titleSoftSkill": "Inglés",
+                "porcentaje": 50
+            }
+        ]
+    },
+    
+    "proyectos": [
+        {
+            "id": 1,
+            "imgProyecto": "../assets/img/projects/proj-barbería.png",
+            "urlProyecto": "https://github.com/YeiAlb/Barber-a-Alura",
+            "titleProyecto": "Barbería Alura",
+            "descripcionProyecto": "Proyecto creado dentro del Programa Oracle-Alura Latam.",
+            "editado": "Alura Latam"
+        },
+        {
+            "id": 2,
+            "imgProyecto": "../assets/img/projects/Decoder.png",
+            "urlProyecto": "https://github.com/YeiAlb/Challenge_Oracle_Decoder",
+            "titleProyecto": "Desencriptador de mensajes",
+            "descripcionProyecto": "Challenge HTML, CSS, JS dentro del Programa Oracle-Alura Latam.",
+            "editado": "Alura Latam"
+        },
+        {
+            "id": 3,
+            "imgProyecto": "../assets/img/projects/casaBrett.png",
+            "urlProyecto": "https://github.com/YeiAlb/Proyecto-Casa-Brett",
+            "titleProyecto": "Casa Brett",
+            "descripcionProyecto": "Diseño de página WEB para local comercial.",
+            "editado": "Y_kAdyMa_R"
+            
+        },
+        {
+            "id": 4,
+            "imgProyecto": "../assets/img/projects/proximo-proyecto.jpg",
+            "urlProyecto": "http://localhost:4200/#",
+            "titleProyecto": "Próximo proyecto",
+            "descripcionProyecto": "'Nunca se te da un sueño sin que también se te dé el poder de hacerlo realidad. Sin embargo tendrás que esforzarte'.",
+            "editado": "Y_kAdyMa_R"
+        }
+    ],
+
+    "footer": {
+        "logo": "../assets/img/logos/Logo-YAMR.jpg",
+        "fechaEdicion": 2023,
+        "proveedor": "Y_kAdyMa_R"
+    }
+}

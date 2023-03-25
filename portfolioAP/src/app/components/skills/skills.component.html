@@ -4,17 +4,26 @@
             <h2>Hard & Soft Skills</h2>
         </div>
     </div>
+    <!-- ============================================= -->
+    <!-- Hard Skills. -->
+    <!-- ============================================= -->
     <div class="row progress-HS">
-        <!-- HardSkills presentadas de modo circular, se instala vía npm ng circle-progress y se importa en el AppModule -->
+        <!-- Se presentan de modo circular, se instala vía npm ng circle-progress y se importa en el AppModule -->
         <div class="col hard-skills">
             <h4>Hard Skills</h4>
-            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-circle-plus"></i></button>
+            <!-- ============================================= -->
+            <!-- BOTÓN (Trigger Modal) Agregar Hard Skills. -->
+            <!-- ============================================= -->
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addHardModal"><i class="fa fa-circle-plus"></i></button>
         </div>
         <div class="row hard-progress">
             <div class="text-center col-sm-6 col-md-4 col-lg-3 col-xl-2 one-hp">
+                <!-- ============================================= -->
+                <!-- BOTONES (Trigger): Editar y eliminar Hard Skills. -->
+                <!-- ============================================= -->
                 <div class="buttons-one-hp">
-                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button>
-                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#eliminaHardModal"><i class="fa fa-trash"></i></button>
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editaHardModal"><i class="fa fa-pen-to-square"></i></button>
                 </div>
                 <div class="img-progress">
                     <circle-progress
@@ -42,16 +51,13 @@
                         [animation]="true"
                         [animationDuration]="500">
                     </circle-progress>
-                </div>                
-                <div class="name-progress">
-
-                </div>    
+                </div> 
             </div>
 
             <div class="text-center col-sm-6 col-md-4 col-lg-3 col-xl-2 one-hp">
                 <div class="buttons-one-hp">
-                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button>
-                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#eliminarHardModal"><i class="fa fa-trash"></i></button>
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editaHardModal"><i class="fa fa-pen-to-square"></i></button>
                 </div>
                 <div class="img-progress">
                     <circle-progress
@@ -220,18 +226,27 @@
         </div>
     </div>
 
+    <!-- ============================================= -->
+    <!-- Soft Skills. -->
+    <!-- ============================================= -->
     <div class="row progress-SK">
-        <!-- Las SoftSkills se presentan a manera de barras, obtenidas a través de Bootstrap -->
+        <!-- Se presentan a manera de barras, obtenidas a través de Bootstrap -->
         <div class="col soft-skills">
             <h4>Soft Skills</h4>
-            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-circle-plus"></i></button>
+            <!-- ============================================= -->
+            <!-- BOTÓN (Trigger Modal) Agregar Soft Skills. -->
+            <!-- ============================================= -->
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addSoftModal"><i class="fa fa-circle-plus"></i></button>
         </div>
         <div class="soft-progress">
             <div class="offset-1 col-11">
                 <h6>Scrum Master</h6>
+                <!-- ============================================= -->
+                <!-- BOTONES (Trigger): Editar y eliminar Soft Skills. -->
+                <!-- ============================================= -->
                 <div class="buttons-one-skp">
-                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-trash"></i></button>
-                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-pen-to-square"></i></button>
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#eliminaSoftModal"><i class="fa fa-trash"></i></button>
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editaSoftModal"><i class="fa fa-pen-to-square"></i></button>
                 </div>
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Danger striped example" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
@@ -302,6 +317,211 @@
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Success striped example" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- MODAL Agregar Hard Skills. -->
+<!-- ============================================= -->
+<div class="modal fade" id="addHardModal" tabindex="-1" aria-labelledby="addHardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addHardModalLabel">Agrega nueva Hard Skill</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- ============================================= -->
+                <!-- FORMULARIO: Agregar Hard Skills. -->
+                <!-- ============================================= -->
+                <form>
+                    <div class="mb-3">
+                        <label for="tittleHardSkill" class="form-label">Habilidad:</label>
+                        <input type="text" placeholder="Ingrese nueva Habilidad Técnica" id="tittleHardSkill" name="habilidadHS" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="porcentajeHardSkill" class="form-label">Agrega un Porcentaje (Escala 0 - 100):</label>
+                        <input type="number" min="0" max="100"
+                        placeholder="Valoración de dominio sobre la habilidad" id="porcentajeHardSkill" name="porcentajeHS" class="form-control" required>
+                    </div>
+                   
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- MODAL Eliminar Hard Skills. -->
+<!-- ============================================= -->
+<div class="modal fade" id="eliminaHardModal" tabindex="-1" aria-labelledby="eliminaHardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="eliminaHardModalLabel">Elimina Habilidad</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ¿Deseas eliminar esta habilidad?
+                <form>
+                    <div class="modal-footer mt-3">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-trash me-1"></i>Eliminar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- MODAL Editar Hard Skills. -->
+<!-- ============================================= -->
+<div class="modal fade" id="editaHardModal" tabindex="-1" aria-labelledby="editaHardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="editaHardModalLabel">Edita Habilidad</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- ============================================= -->
+                <!-- FORMULARIO: Editar Hard Skills. -->
+                <!-- ============================================= -->
+                <form>
+                    <div class="mb-3">
+                        <label for="tittleSoftSkill" class="form-label">Habilidad social o interpersonal:</label>
+                        <input type="text" placeholder="Ingrese nueva Habilidad" id="tittleHardSkill" name="habilidadHS" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="porcentajeHardSkill" class="form-label">Agrega un Porcentaje (Escala 0 - 100):</label>
+                        <input type="number" min="0" max="100"
+                        placeholder="Valoración de dominio sobre la habilidad" id="porcentajeHardSkill" name="porcentajeHS" class="form-control" required>
+                    </div>
+                   
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ============================================= -->
+<!-- MODAL Agregar Hard Skills. -->
+<!-- ============================================= -->
+<div class="modal fade" id="addSoftModal" tabindex="-1" aria-labelledby="addSoftModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addSoftModalLabel">Agrega nueva Soft Skill</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- ============================================= -->
+                <!-- FORMULARIO: Agregar Soft Skills. -->
+                <!-- ============================================= -->
+                <form>
+                    <div class="mb-3">
+                        <label for="tittleSoftSkill" class="form-label">Habilidad:</label>
+                        <input type="text" placeholder="Ingrese nueva Habilidad Social o Interpersonal" id="tittleSoftSkill" name="habilidadSS" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="porcentajeSoftSkill" class="form-label">Agrega un Porcentaje (Escala 0 - 100):</label>
+                        <input type="number" min="0" max="100"
+                        placeholder="Valoración de dominio sobre la habilidad" id="porcentajeSoftSkill" name="porcentajeSS" class="form-control" required>
+                    </div>
+                   
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- MODAL Eliminar Soft Skills. -->
+<!-- ============================================= -->
+<div class="modal fade" id="eliminaSoftModal" tabindex="-1" aria-labelledby="eliminaSoftModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="eliminaSoftModalLabel">Elimina esta habilidad</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ¿Deseas eliminar esta habilidad?
+                <form>
+                    <div class="modal-footer mt-3">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-trash me-1"></i>Eliminar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- MODAL Editar Soft Skills. -->
+<!-- ============================================= -->
+<div class="modal fade" id="editaSoftModal" tabindex="-1" aria-labelledby="editaSoftModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="editaSoftModalLabel">Edita Habilidad</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- ============================================= -->
+                <!-- FORMULARIO: Editar Soft Skills -->
+                <!-- ============================================= -->
+                <form>
+                    <div class="mb-3">
+                        <label for="tittleSoftSkill" class="form-label">Habilidad:</label>
+                        <input type="text" placeholder="Ingrese nueva Habilidad Social o Interpersonal" id="tittleSoftSkill" name="habilidadSS" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="porcentajeSoftSkill" class="form-label">Agrega un Porcentaje (Escala 0 - 100):</label>
+                        <input type="number" min="0" max="100"
+                        placeholder="Valoración de dominio sobre la habilidad" id="porcentajeSoftSkill" name="porcentajeSS" class="form-control" required>
+                    </div>
+                   
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

@@ -35,6 +35,10 @@ button {
     align-items: flex-end;
 }
 
+textarea {
+    height: 8rem;
+}
+
 @media (max-width: 300px) {
     .cardedition {
         display: block;
