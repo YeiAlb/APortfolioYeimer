@@ -13,7 +13,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#aboutMe">Sobre mí</a>
+                    <a class="nav-link active" aria-current="page" routerLink="/inicio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#aboutMe">Sobre Mí</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#experience">Experiencia Laboral</a>
@@ -38,11 +41,24 @@
             </ul>
 
             <!-- ============================================= -->
+            <!-- INICIAR SESIÓN -->
             <!-- BOTÓN: LOGIN (Trigger Modal) -->
             <!-- ============================================= -->
-            <button type="button" class="btn btn-light m-1" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa-solid fa-user fa-xl"></i></button>
-            <button type="button" class="btn btn-light m1" data-bs-toggle="modal" data-bs-target="#logoutModal"><i class="fa-solid fa-user-lock fa-xl"></i></button>
-            <!-- Botón logout no lleva modal -->
+            <li *ngIf="!userLoginOn" class="nav-item"> <!-- Directiva estructural, modifica el componente HTML de manera dinámica-->
+                <a class="nav-link" routerLink="/iniciar-sesion"><button type="button" class="btn btn-light m-1" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa-solid fa-user fa"></i></button></a>
+                <!-- <button type="button" class="btn btn-light m-1" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa-solid fa-user fa-xl"></i></button> -->
+            </li>
+            
+            
+            <!-- ============================================= -->
+            <!-- CERRAR SESIÓN -->
+            <!-- BOTÓN: LOGOUT (Trigger Modal) -->
+            <!-- ============================================= -->
+            <li *ngIf="userLoginOn" class="nav-item">
+                <a class="nav-link" routerLink="/inicio"><button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#logoutModal"><i class="fa-solid fa-user-lock fa"></i></button></a>
+                <!-- <button type="button" class="btn btn-light mt-1" data-bs-toggle="modal" data-bs-target="#logoutModal"><i class="fa-solid fa-user-lock fa-xl"></i></button> -->
+                <!-- Botón logout no lleva modal -->
+            </li>
         </div>
     </div>
 </nav>
@@ -52,44 +68,3 @@
         <a href="#"><img src="https://i.ibb.co/py4QLYZ/Banner-luz.jpg" alt="Banner-luz" border="0" width="100%"></a>
     </div>
 </div>
-
-
-<!-- ============================================= -->
-<!-- MODAL LOGIN (Bootstrap)) -->
-<!-- ============================================= -->
-<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="loginModalLabel">Login - Portfolio Web AP</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- ============================================= -->
-                <!-- FORMULARIO: CORREO Y CONTRASEÑA -->
-                <!-- ============================================= -->
-                <form>
-                    <div class="mb-3">
-                        <label for="InputEmail" class="form-label">Tu email</label>
-                        <input type="email" class="form-control" id="InputEmail">
-                    </div>
-                    <div class="mb-3">
-                        <label for="InputPassword" class="form-label">Tu contraseña</label>
-                        <input type="password" class="form-control" id="InputPassword">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <!-- ============================================= -->
-                        <!-- BOTÓN DEL FORMULARIO -->
-                        <!-- ============================================= -->
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ============================================= -->
-<!-- MODAL LOGOUT -->
-<!-- ============================================= -->

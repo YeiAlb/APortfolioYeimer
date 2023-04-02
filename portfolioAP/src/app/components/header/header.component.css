@@ -40,7 +40,9 @@ a.nav-link {
 }
 
 #navbarSupportedContent {
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: self-end;
 }
 
 /* =============== PANTALLA MD, SM Y XS =============== */
