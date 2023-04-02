@@ -1,0 +1,62 @@
+#login{
+    margin: 0;
+    padding: 0;
+    background: url(../../../assets/img/fondoLogin.png) no-repeat;
+    height: 100vh;
+    font-family: sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+.loginBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    min-height: 200px;
+    background: #000000;
+    border-radius: 10px;
+    padding: 40px;
+    box-sizing: border-box
+}
+
+@media screen and (max-width: 400px){
+    .loginBox{
+        width: auto;
+    }
+}
+
+.user{
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px
+}
+
+h3{
+    margin: 0;
+    padding: 0 0 20px;
+    color: #59238F;
+    text-align: center
+}
+
+.loginBox input{
+    width: 100%;
+    margin-bottom: 20px
+}
+
+label{
+    color: darkkhaki
+}
+
+.loginBox button[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    background: #59238F;
+    color: #fff;
+    cursor: pointer
+}
