@@ -17,6 +17,9 @@ import { Error404Component } from './components/error404/error404.component';
 import { LoginComponent } from './components/login/login.component';
 import { IndexComponent } from './components/index/index.component';
 import { ModalAboutMeComponent } from './modals/modal-about-me/modal-about-me.component';
+import { ModalEducationComponent } from './modals/modal-education/modal-education.component';
+import { ModalExperienceComponent } from './modals/modal-experience/modal-experience.component';
+import { ModalSkillsComponent } from './modals/modal-skills/modal-skills.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { ModalAboutMeComponent } from './modals/modal-about-me/modal-about-me.co
     LoginComponent,
     IndexComponent,
     ModalAboutMeComponent,
+    ModalEducationComponent,
+    ModalExperienceComponent,
+    ModalSkillsComponent,
   ],
   imports: [
     BrowserModule,
