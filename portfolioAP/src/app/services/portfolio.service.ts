@@ -17,10 +17,10 @@ export class PortfolioService {
 
   //Método observable para los componentes.
   obtenerDatos():Observable<any> {
-    //Como retorno a través de un request, con el método GET -->this.alias.get se obtienen los datos desde una url para comunicarse, ahora desde un Json('entre paréntesis y comillas simples'), de manera asícrona;
-    //También un CALLBACK, para observar la opción del problema para la conexión con el sevidor.
     return this.http.get('./assets/data/data.json');
-    //Luego hay que subscrir en el componente que requiere que la información sea inyectada.
   }
-
+    //Como retorno a través de un request, con el método GET -->this.alias.get se obtienen los datos desde una url para comunicarse, ahora desde un Json('entre paréntesis y comillas simples'), de manera asícrona;
+    //También un CALLBACK, para observar la opción del problema para la conexión con el servidor.
+    
+    //Luego hay que subscrirse en el componente que requiere que la información sea inyectada.
 }
