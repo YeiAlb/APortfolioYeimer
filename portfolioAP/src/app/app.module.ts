@@ -16,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { Error404Component } from './components/error404/error404.component';
 import { LoginComponent } from './components/login/login.component';
 import { IndexComponent } from './components/index/index.component';
+import { ModalAboutMeComponent } from './modals/modal-about-me/modal-about-me.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { IndexComponent } from './components/index/index.component';
     Error404Component,
     LoginComponent,
     IndexComponent,
+    ModalAboutMeComponent,
   ],
   imports: [
     BrowserModule,
