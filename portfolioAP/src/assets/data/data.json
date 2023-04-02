@@ -3,10 +3,10 @@
         "banner": "https://i.ibb.co/py4QLYZ/Banner-luz.jpg",
         "nombre": "Yeimer Alberto",
         "apellido": "Márquez Rojas",
-        "foto": "../assets/img/Foto de perfil.jpg",
+        "foto": "./assets/img/fotoPerfil.jpg",
         "email": "mr.yeimeralberto@gmail.com",
         "ocupacion": "Full Stack Developer Jr",
-        "descripcion": "Soy un educador con experiencia en docencia universitaria; habilidades organizativas, liderazgo de grupos, uso de diversos programas básicos de Microsoft Office y de algunas plataformas de aula virtual, me gusta enseñar y estar en continuo aprendizaje, en especial sobre <b>programación y desarrollo WEB</b>, como meta para crecer y afianzarme profesionalmente a través del auge tecnológico formando parte de diversos proyectos con trabajo en equipo."
+        "descripcion": "Soy un educador con experiencia en docencia universitaria; habilidades organizativas, liderazgo de grupos, uso algunas plataformas de aula virtual, me agrada enseñar, pero sobre todos estar en continuo aprendizaje, especialmente ahora sobre programación y desarrollo WEB, como meta para crecer y afianzarme profesionalmente por medio del auge tecnológico, y formando parte de diversos proyectos junto a equipos de trabajo."
     },
     
     "redes": [
@@ -33,7 +33,7 @@
     "trabajos": [
         {
             "id": 1,
-            "logoEmpresarial": "../assets/img/logos/freelancer-logo.jpg",
+            "logoEmpresarial": "./assets/img/logos/freelancer-logo.jpg",
             "url": "",
             "cargo": "Tutor Académico",
             "sede": "Freelance",
@@ -49,7 +49,7 @@
         },
         {
             "id": 2,
-            "logoEmpresarial": "../assets/img/logos/logo_ula.jpg",
+            "logoEmpresarial": "./assets/img/logos/logo_ula.jpg",
             "url": "http://www.ula.ve/index.php",
             "cargo": "Profesor Universitario",
             "sede": "Universidad de Los Andes (ULA) Nucleo 'Pedro Rincón Gutiérrez'",
@@ -65,7 +65,7 @@
         },
         {
             "id": 3,
-            "logoEmpresarial": "../assets/img/logos/fe-y-alegria-log.jpg",
+            "logoEmpresarial": "./assets/img/logos/fe-y-alegria-log.jpg",
             "url": "https://www.feyalegria.org/venezuela/",
             "cargo": "Coordinador de Pastoral",
             "sede": "Colegio Fe y Alegría 'Pbro. Rubén Darío Mora'",
@@ -81,7 +81,7 @@
         },
         {
             "id": 4,
-            "logoEmpresarial": "../assets/img/logos/logo-iuesta.jpg",
+            "logoEmpresarial": "./assets/img/logos/logo-iuesta.jpg",
             "url": "https://www.instagram.com/iuesta1/?hl=en",
             "cargo": "Profesor Universitario",
             "sede": "Instituto Universitario Eclesiástico 'Santo Tomás de Aquino' (IUESTA)",
@@ -100,7 +100,7 @@
     "estudios": [
         {
             "id": 1,
-            "logoInstitucional": "../assets/img/logos/Logo-UBA.png",
+            "logoInstitucional": "./assets/img/logos/Logo-UBA.png",
             "url": "https://www.psi.uba.ar/",
             "profesion": "Licenciado en Psicología",
             "sede": "Universidad de Buenos Aires (UBA)",
@@ -115,7 +115,7 @@
         },
         {
             "id": 2,
-            "logoInstitucional": "../assets/img/logos/logo-iuesta.jpg",
+            "logoInstitucional": "./assets/img/logos/logo-iuesta.jpg",
             "url": "https://www.instagram.com/iuesta1/?hl=en",
             "profesion": "Licenciado en Educación Mención Filosofía",
             "sede": "IUESTA",
@@ -130,7 +130,7 @@
         },
         {
             "id": 3,
-            "logoInstitucional": "../assets/img/logos/Javeriana.png",
+            "logoInstitucional": "./assets/img/logos/Javeriana.png",
             "url": "https://www.javeriana.edu.co/inicio",
             "profesion": "Baccalaureum in Theologiae",
             "sede": "Universidad Javeriana",
@@ -145,7 +145,7 @@
         },
         {
             "id": 4,
-            "logoInstitucional": "../assets/img/logos/logo-iuesta.jpg",
+            "logoInstitucional": "./assets/img/logos/logo-iuesta.jpg",
             "url": "https://www.facebook.com/people/Seminario-Diocesano-Santo-Tom%C3%A1s-de-Aquino/100064599585675/",
             "profesion": "Licenciado en Teología",
             "sede": "IUESTA",
@@ -234,7 +234,7 @@
     "proyectos": [
         {
             "id": 1,
-            "imgProyecto": "../assets/img/projects/proj-barbería.png",
+            "imgProyecto": "./assets/img/projects/proj-barbería.png",
             "urlProyecto": "https://github.com/YeiAlb/Barber-a-Alura",
             "titleProyecto": "Barbería Alura",
             "descripcionProyecto": "Proyecto creado dentro del Programa Oracle-Alura Latam.",
@@ -242,7 +242,7 @@
         },
         {
             "id": 2,
-            "imgProyecto": "../assets/img/projects/Decoder.png",
+            "imgProyecto": "./assets/img/projects/Decoder.png",
             "urlProyecto": "https://github.com/YeiAlb/Challenge_Oracle_Decoder",
             "titleProyecto": "Desencriptador de mensajes",
             "descripcionProyecto": "Challenge HTML, CSS, JS dentro del Programa Oracle-Alura Latam.",
@@ -250,7 +250,7 @@
         },
         {
             "id": 3,
-            "imgProyecto": "../assets/img/projects/casaBrett.png",
+            "imgProyecto": "./assets/img/projects/casaBrett.png",
             "urlProyecto": "https://github.com/YeiAlb/Proyecto-Casa-Brett",
             "titleProyecto": "Casa Brett",
             "descripcionProyecto": "Diseño de página WEB para local comercial.",
@@ -259,7 +259,7 @@
         },
         {
             "id": 4,
-            "imgProyecto": "../assets/img/projects/proximo-proyecto.jpg",
+            "imgProyecto": "./assets/img/projects/proximo-proyecto.jpg",
             "urlProyecto": "http://localhost:4200/#",
             "titleProyecto": "Próximo proyecto",
             "descripcionProyecto": "'Nunca se te da un sueño sin que también se te dé el poder de hacerlo realidad. Sin embargo tendrás que esforzarte'.",
@@ -268,7 +268,7 @@
     ],
 
     "footer": {
-        "logo": "../assets/img/logos/Logo-YAMR.jpg",
+        "logo": "./assets/img/logos/Logo-YAMR.jpg",
         "fechaEdicion": 2023,
         "proveedor": "Y_kAdyMa_R"
     }

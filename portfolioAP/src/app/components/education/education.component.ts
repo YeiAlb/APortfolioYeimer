@@ -17,10 +17,10 @@ export class EducationComponent {
   ngOnInit():void {
     //Subcripción del inyectable para el DataBinding o PropertyBinding.
     this.dataBasePortfolio.obtenerDatos().subscribe (data => {
-      //Asignación de los datos requeridos del json a la variable.
       this.estudiosList = data.estudios;
-      //data es un alias.
     })
+    //Asignación de los datos requeridos del json a la variable.
+    //data es un alias.
   }
   //No fue necesario implementar ngOnInit ¿mmm?
 }
