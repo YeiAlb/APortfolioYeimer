@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.css']
 })
-export class AboutMeComponent {
+export class AboutMeComponent implements OnInit {
   //Creamos una variable.
   miPortfolio: any;
 

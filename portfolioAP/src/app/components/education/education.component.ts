@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
@@ -6,12 +6,12 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.css']
 })
-export class EducationComponent {
+export class EducationComponent implements OnInit {
 
   //Variable definida para el array.
   estudiosList: any;
 
-  //Se inyecta el servicio con la clase para exportar cuando fue creado
+  //Se inyecta el servicio con la clase para exportar.
   constructor(private dataBasePortfolio: PortfolioService) { }
 
   ngOnInit():void {
@@ -22,5 +22,4 @@ export class EducationComponent {
     //Asignación de los datos requeridos del json a la variable.
     //data es un alias.
   }
-  //No fue necesario implementar ngOnInit ¿mmm?
 }

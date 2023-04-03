@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/services/auth/login.service';
 
 @Component({
@@ -7,16 +7,16 @@ import { LoginService } from 'src/app/services/auth/login.service';
   styleUrls: ['./header.component.css']
 })
 
-export class HeaderComponent {
+export class HeaderComponent implements OnInit, OnDestroy {
   userLoginOn: boolean = false; //Para loguearse. En el component.html se trabaja con las directivas estructurales *ngIf y se especifican las variables --> !userLoginOn && userLoginOn
 
   //Subscripción del Servicio de Login.
   constructor(private LoginService: LoginService) { }
 
-//Buena práctica, desubscribirse, para evitar fugas de memoria.
-ngOnDestroy():void {
-  this.LoginService.currentUserLoginOn.unsubscribe();
-}
+  //Buena práctica, desubscribirse, para evitar fugas de memoria.
+  ngOnDestroy():void {
+    this.LoginService.currentUserLoginOn.unsubscribe();
+  }
 
   ngOnInit():void { //Al iniciar, la subscripción y asignación, de acuerdo al *ngIf
     this.LoginService.currentUserLoginOn.subscribe({

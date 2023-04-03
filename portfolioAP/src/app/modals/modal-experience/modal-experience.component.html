@@ -1,1 +1,137 @@
-<p>modal-experience works!</p>
+<!-- ============================================= -->
+<!-- MODAL Agregar Experiencia Laboral. -->
+<!-- ============================================= -->
+<div class="modal fade" id="addExperienciaModal" tabindex="-1" aria-labelledby="addExperienciaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addExperienciaModalLabel">Agrega nueva Experiencia Laboral</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- ============================================= -->
+                <!-- FORMULARIO: Agregar Experiencia Laboral. -->
+                <!-- ============================================= -->
+                <form>
+                    <div class="mb-3">
+                        <label for="logoInstitucional" class="form-label">Logo de la Empresa:</label>
+                        <input type="url" placeholder="Inserte URL del logo" id="logoInstitucional" alt="Logo de la empresa" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cargo" class="form-label">Cargo u ocupación:</label>
+                        <input type="text" placeholder="Ingrese su cargo u ocupación" id="cargo" name="cargo" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaInicio" class="form-label">Fecha de inicio:</label>
+                        <input type="month" id="fechaInicio" name="fechaInicio" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaFin" class="form-label">Fecha de culminación:</label>
+                        <input type="month" id="fechaFin" name="fechaFin" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ciudad" class="form-label">Ciudad:</label>
+                        <input type="text" placeholder="Ingrese Ciudad" id="ciudad" name="ubicacion" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="estado" class="form-label">Estado o Provincia:</label>
+                        <input type="text" placeholder="Ingrese Estado o Provincia" id="estado" name="ubicacion" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pais" class="form-label">País:</label>
+                        <input type="text" placeholder="Ingrese País" id="pais" name="ubicacion" class="form-control" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- MODAL Eliminar Experiencia laboral. -->
+<!-- ============================================= -->
+<div class="modal fade" id="eliminaExperienciaModal" tabindex="-1" aria-labelledby="eliminaExperienciaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="eliminaExperienciaModalLabel">Elimina Experiencia Laboral</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ¿Deseas eliminar esta experiencia laboral?
+                <form>
+                    <div class="modal-footer mt-3">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-trash me-1"></i>Eliminar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- MODAL Editar Experiencia laboral. -->
+<!-- ============================================= -->
+<div class="modal fade" id="editaExperienciaModal" tabindex="-1" aria-labelledby="editaExperienciaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="editaExperienciaModalLabel">Edita Experiencia Laboral</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- ============================================= -->
+                <!-- FORMULARIO: Editar Experiencia Laboral. -->
+                <!-- ============================================= -->
+                <form>
+                    <div class="mb-3">
+                        <label for="logoInstitucional" class="form-label">Logo de la Empresa:</label>
+                        <input type="url" placeholder="Inserte URL del logo" id="logoInstitucional" alt="Logo de la empresa" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cargo" class="form-label">Cargo u ocupación:</label>
+                        <input type="text" placeholder="Ingrese su cargo u ocupación" id="cargo" name="cargo" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaInicio" class="form-label">Fecha de inicio:</label>
+                        <input type="month" id="fechaInicio" name="fechaInicio" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaFin" class="form-label">Fecha de culminación:</label>
+                        <input type="month" id="fechaFin" name="fechaFin" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ciudad" class="form-label">Ciudad:</label>
+                        <input type="text" placeholder="Ingrese Ciudad" id="ciudad" name="ubicacion" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="estado" class="form-label">Estado o Provincia:</label>
+                        <input type="text" placeholder="Ingrese Estado o Provincia" id="estado" name="ubicacion" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pais" class="form-label">País:</label>
+                        <input type="text" placeholder="Ingrese País" id="pais" name="ubicacion" class="form-control" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -20,6 +20,7 @@ import { ModalAboutMeComponent } from './modals/modal-about-me/modal-about-me.co
 import { ModalEducationComponent } from './modals/modal-education/modal-education.component';
 import { ModalExperienceComponent } from './modals/modal-experience/modal-experience.component';
 import { ModalSkillsComponent } from './modals/modal-skills/modal-skills.component';
+import { ModalProjectsComponent } from './modals/modal-projects/modal-projects.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ModalSkillsComponent } from './modals/modal-skills/modal-skills.compone
     ModalEducationComponent,
     ModalExperienceComponent,
     ModalSkillsComponent,
+    ModalProjectsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,50 @@
-<p>modal-about-me works!</p>
+<!-- ============================================= -->
+<!-- MODAL Editar Perfil. -->
+<!-- ============================================= -->
+<div class="modal fade" id="editaPerfilModal" tabindex="-1" aria-labelledby="editaPerfilModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="editaPerfilModalLabel">Edita tu perfil</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- ============================================= -->
+                <!-- FORMULARIO Perfil -->
+                <!-- ============================================= -->
+                <form>
+                    <div class="mb-3">
+                        <label for="fotoPerfil" class="form-label">Foto del perfil:</label>
+                        <input type="url" placeholder="Inserte URL de la foto" id="fotoPerfil" name="fotoPerfil" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombres" class="form-label">Nombre(s):</label>
+                        <input type="text" placeholder="Ingrese su(s) Nombre(s) y Apellido(s)" id="nombres" name="identidad" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="apellidos" class="form-label"> Apellido(s):</label>
+                        <input type="text" placeholder="Ingrese su(s) Nombre(s) y Apellido(s)" id="Apellidos" name="identidad" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ocupacion" class="form-label">Ocupación:</label>
+                        <input type="text" placeholder="Ingrese su ocupación actual" id="ocupacion" name="ocupacion" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcionSobreMi" class="form-label">Sobre Mí:</label>
+                        <textarea type="text" placeholder="Ingrese descripción" id="descripcionSobreMi" name="descripcionSobreMi" class="form-control" required></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
