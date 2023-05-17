@@ -1,1 +1,144 @@
-<p>modal-projects works!</p>
+<!-- ============================================= -->
+<!-- MODAL Agregar Proyecto. -->
+<!-- ============================================= -->
+<div class="modal fade" id="addProyectoModal" tabindex="-1" aria-labelledby="addProyectoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addProyectoModalLabel">Agrega nuevo Proyecto</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- ============================================= -->
+            <!-- FORMULARIO: Agregar Proyecto. -->
+            <!-- ============================================= -->
+            <form [formGroup]="proyectoForm" name="proyectoForm">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="imgProyecto" class="form-label">URL de la imagen del Proyecto:</label>
+                        <input type="url" placeholder="Inserte URL de la imagen" id="imgProyecto" alt="Logo de la empresa" class="form-control" formControlName="imagen_proyecto" [ngClass]="{'is-invalid':Imagen_proyecto?.errors && Imagen_proyecto?.touched,'is-valid':!Imagen_proyecto?.errors && Imagen_proyecto?.touched}" required>
+                        <!-- Para comprobar la validación -->
+                        <div *ngIf="Imagen_proyecto?.errors  && Imagen_proyecto?.touched" class="mb-4">    
+                            <p *ngIf="Imagen_proyecto?.hasError('required')" class="text-danger"><i>La imagen sobre proyecto es requerida.</i></p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="urlProyecto" class="form-label">URL del proyecto:</label>
+                        <input type="url" placeholder="Nombre del proveedor del proyecto" id="urlProyecto" name="urlProyecto" class="form-control" formControlName="url_proyecto" [ngClass]="{'is-invalid':Url_proyecto?.errors && Url_proyecto?.touched,'is-valid':!Url_proyecto?.errors && Url_proyecto?.touched}" required>
+                        <!-- Para comprobar la validación -->
+                        <div *ngIf="Url_proyecto?.errors  && Url_proyecto?.touched" class="mb-4">    
+                            <p *ngIf="Url_proyecto?.hasError('required')" class="text-danger"><i>La dirección URL del proyecto es requerida.</i></p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="titleProyecto" class="form-label">Título del Proyecto:</label>
+                        <input type="text" placeholder="Ingrese nombre del Proyecto" id="titleProyecto" name="tituloProyecto" class="form-control" formControlName="titulo_proyecto" [ngClass]="{'is-invalid':Titulo_proyecto?.errors && Titulo_proyecto?.touched,'is-valid':!Titulo_proyecto?.errors && Titulo_proyecto?.touched}" required>
+                        <!-- Para comprobar la validación -->
+                        <div *ngIf="Titulo_proyecto?.errors  && Titulo_proyecto?.touched" class="mb-4">    
+                            <p *ngIf="Titulo_proyecto?.hasError('required')" class="text-danger"><i>El título es requerido.</i></p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="descripcionProyecto" class="form-label">Sobre el Proyecto:</label>
+                        <textarea type="text" placeholder="Ingrese breve descripción del Proyecto " id="descripcionProyecto" name="descripcionProyecto" class="form-control" formControlName="descripcion" [ngClass]="{'is-invalid':Descripcion?.errors && Descripcion?.touched,'is-valid':!Descripcion?.errors && Descripcion?.touched}" required></textarea>
+                            <!-- Para comprobar la validación -->
+                            <div *ngIf="Descripcion?.errors  && Descripcion?.touched" class="mb-4">    
+                                <p *ngIf="Descripcion?.hasError('required')" class="text-danger"><i>Una breve descripción es requerida.</i></p>
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="reset()">Cancelar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" (click)="saveProyecto()" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- MODAL Editar Proyecto. -->
+<!-- ============================================= -->
+<div class="modal fade" id="editaProyectoModal" tabindex="-1" aria-labelledby="editaProyectoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="editaProyectoModal|Label">Edita Proyecto</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form [formGroup]="proyectoForm" name="proyectoForm">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="imgProyecto" class="form-label">URL de la imagen del Proyecto:</label>
+                        <input type="url" placeholder="Inserte URL de la imagen" id="imgProyecto" alt="Logo de la empresa" class="form-control" formControlName="imagen_proyecto" [ngClass]="{'is-invalid':Imagen_proyecto?.errors && Imagen_proyecto?.touched,'is-valid':!Imagen_proyecto?.errors && Imagen_proyecto?.touched}" required>
+                        <!-- Para comprobar la validación -->
+                        <div *ngIf="Imagen_proyecto?.errors  && Imagen_proyecto?.touched" class="mb-4">    
+                            <p *ngIf="Imagen_proyecto?.hasError('required')" class="error text-small"><i>La imagen sobre proyecto es requerida.</i></p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="urlProyecto" class="form-label">URL del proyecto:</label>
+                        <input type="url" placeholder="Nombre del proveedor del proyecto" id="urlProyecto" name="urlProyecto" class="form-control" formControlName="url_proyecto" [ngClass]="{'is-invalid':Url_proyecto?.errors && Url_proyecto?.touched,'is-valid':!Url_proyecto?.errors && Url_proyecto?.touched}" required>
+                        <!-- Para comprobar la validación -->
+                        <div *ngIf="Url_proyecto?.errors  && Url_proyecto?.touched" class="mb-4">    
+                            <p *ngIf="Url_proyecto?.hasError('required')" class="error text-small"><i>La dirección URL del proyecto es requerida.</i></p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="titleProyecto" class="form-label">Título del Proyecto:</label>
+                        <input type="text" placeholder="Ingrese nombre del Proyecto" id="titleProyecto" name="tituloProyecto" class="form-control" formControlName="titulo_proyecto" [ngClass]="{'is-invalid':Titulo_proyecto?.errors && Titulo_proyecto?.touched,'is-valid':!Titulo_proyecto?.errors && Titulo_proyecto?.touched}" required>
+                        <!-- Para comprobar la validación -->
+                        <div *ngIf="Titulo_proyecto?.errors  && Titulo_proyecto?.touched" class="mb-4">    
+                            <p *ngIf="Titulo_proyecto?.hasError('required')" class="error text-small"><i>El título es requerido.</i></p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="descripcionProyecto" class="form-label">Sobre el Proyecto:</label>
+                        <textarea type="text" placeholder="Ingrese breve descripción del Proyecto " id="descripcionProyecto" name="descripcionProyecto" class="form-control" formControlName="descripcion" [ngClass]="{'is-invalid':Descripcion?.errors && Descripcion?.touched,'is-valid':!Descripcion?.errors && Descripcion?.touched}" required></textarea>
+                            <!-- Para comprobar la validación -->
+                            <div *ngIf="Descripcion?.errors  && Descripcion?.touched" class="mb-4">    
+                                <p *ngIf="Descripcion?.hasError('required')" class="error text-small"><i>Una breve descripción es requerida.</i></p>
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- MODAL Eliminar Proyecto. -->
+<!-- ============================================= -->
+<!-- <div class="modal fade" id="eliminaProyectoModal" tabindex="-1" aria-labelledby="eliminaProyectoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="eliminaProyectoModalLabel">Elimina Proyecto</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ¿Deseas eliminar Proyecto?
+                <form>
+                    <div class="modal-footer mt-3">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button> -->
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <!-- <button type="submit" class="btn btn-primary"><i class="fa fa-trash me-1"></i>Eliminar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> -->

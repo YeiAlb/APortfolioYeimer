@@ -1,1 +1,220 @@
-<p>modal-skills works!</p>
+<!-- ============================================= -->
+<!-- MODAL Agregar Hard Skills. -->
+<!-- ============================================= -->
+<div class="modal fade" id="addHardModal" tabindex="-1" aria-labelledby="addHardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addHardModalLabel">Agrega nueva Hard Skill</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="reset()"></button>
+            </div>
+            <!-- ============================================= -->
+            <!-- FORMULARIO: Agregar Hard Skills. -->
+            <!-- ============================================= -->
+            <form [formGroup]="skillsForm" name="addHardSkillsForm">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="tittleHardSkill" class="form-label">Habilidad:</label>
+                        <input type="text" placeholder="Ingrese nueva Habilidad" id="tittleHardSkill" name="habilidadHardSkill" class="form-control" formControlName="nombre" [ngClass]="{'is-invalid':Nombre?.errors && Nombre?.touched,'is-valid':!Nombre?.errors && Nombre?.touched}" required>
+                        <!-- Para comprobar la validación -->
+                            <div *ngIf="Nombre?.errors  && Nombre?.touched" class="mb-4">    
+                                <p *ngIf="Nombre?.hasError('required')" class="text-danger"><i>La habilidad es requerida.</i></p>
+                            </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="porcentajeHardSkill" class="form-label">Agrega un Porcentaje (Escala 0 - 100):</label>
+                        <input type="number" min="0" max="100"
+                        placeholder="Dominio sobre la habilidad" id="porcentajeHardSkill" name="porcentajeHardSkill" class="form-control" formControlName="porcentaje" [ngClass]="{'is-invalid':Porcentaje?.errors && Porcentaje?.touched,'is-valid':!Porcentaje?.errors && Porcentaje?.touched}" required>
+                        <!-- Para comprobar la validación -->
+                            <div *ngIf="Porcentaje?.errors  && Porcentaje?.touched" class="mb-4">    
+                                <p *ngIf="Porcentaje?.hasError('required')" class="text-danger"><i>El porcentaje estimado es requerido.</i></p>
+                                <p *ngIf="Porcentaje?.hasError('min')" class="text-danger"><i>El porcentaje mínimo es 0.</i></p>
+                                <p *ngIf="Porcentaje?.hasError('max')" class="text-danger"><i>El porcentaje máximo es 100.</i></p>
+                            </div>
+                    </div>                   
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="reset()">Cancelar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" (click)="saveHardSkill()" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- ============================================= -->
+<!-- MODAL Editar Hard Skills. -->
+<!-- ============================================= -->
+<div class="modal fade" id="editaHardModal" tabindex="-1" aria-labelledby="editaHardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="editaHardModalLabel">Edita Habilidad</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="reset()"></button>
+            </div>
+            <!-- ============================================= -->
+            <!-- FORMULARIO: Editar Hard Skills. -->
+            <!-- ============================================= -->
+            <form [formGroup]="skillsForm" name="editHardSkillsForm">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="tittleHardSkill" class="form-label">Habilidad:</label>
+                        <input type="text" placeholder="Ingrese nueva Habilidad" id="tittleHardSkill" name="habilidadHardSkill" class="form-control" formControlName="nombre" [ngClass]="{'is-invalid':Nombre?.errors && Nombre?.touched,'is-valid':!Nombre?.errors && Nombre?.touched}" required>
+                        <!-- Para comprobar la validación -->
+                            <div *ngIf="Nombre?.errors  && Nombre?.touched" class="mb-4">    
+                                <p *ngIf="Nombre?.hasError('required')" class="text-danger"><i>La habilidad es requerida.</i></p>
+                            </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="porcentajeHardSkill" class="form-label">Agrega un Porcentaje (Escala 0 - 100):</label>
+                        <input type="number" min="0" max="100"
+                        placeholder="Valoración de dominio sobre la habilidad" id="porcentajeHardSkill" name="porcentajeHardSkill" class="form-control" formControlName="porcentaje" [ngClass]="{'is-invalid':Porcentaje?.errors && Porcentaje?.touched,'is-valid':!Porcentaje?.errors && Porcentaje?.touched}" required>
+                        <!-- Para comprobar la validación -->
+                            <div *ngIf="Porcentaje?.errors  && Porcentaje?.touched" class="mb-4">    
+                                <p *ngIf="Porcentaje?.hasError('required')" class="text-danger"><i>El porcentaje estimado es requerido.</i></p>
+                                <p *ngIf="Porcentaje?.hasError('min')" class="text-danger"><i>El porcentaje mínimo es 0.</i></p>
+                                <p *ngIf="Porcentaje?.hasError('max')" class="text-danger"><i>El porcentaje máximo es 100.</i></p>
+                            </div>
+                    </div>
+                   
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="reset()">Cancelar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" (click)="updateHardSkill()" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- ============================================= -->
+<!-- MODAL Agregar Soft Skills. -->
+<!-- ============================================= -->
+<div class="modal fade" id="addSoftModal" tabindex="-1" aria-labelledby="addSoftModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addSoftModalLabel">Agrega nueva Soft Skill</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- ============================================= -->
+            <!-- FORMULARIO: Agregar Soft Skills. -->
+            <!-- ============================================= -->
+            <form [formGroup]="skillsForm" name="addSoftSkillsForm">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="tittleSoftSkill" class="form-label">Habilidad:</label>
+                        <input type="text" placeholder="Ingrese nueva Habilidad" id="tittleSoftSkill" name="habilidadSoftSkill" class="form-control" formControlName="nombre" [ngClass]="{'is-invalid':Nombre?.errors && Nombre?.touched,'is-valid':!Nombre?.errors && Nombre?.touched}" required>
+                            <!-- Para comprobar la validación -->
+                            <div *ngIf="Nombre?.errors  && Nombre?.touched" class="mb-4">    
+                                <p *ngIf="Nombre?.hasError('required')" class="text-danger"><i>La habilidad es requerida.</i></p>
+                            </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="porcentajeSoftSkill" class="form-label">Agrega un Porcentaje (Escala 0 - 100):</label>
+                        <input type="number" min="0" max="100"
+                        placeholder="Valoración de dominio sobre la habilidad" id="porcentajeSoftSkill" name="porcentajeSoftSkill"  class="form-control" formControlName="porcentaje" [ngClass]="{'is-invalid':Porcentaje?.errors && Porcentaje?.touched,'is-valid':!Porcentaje?.errors && Porcentaje?.touched}" required>
+                        <!-- Para comprobar la validación -->
+                            <div *ngIf="Porcentaje?.errors  && Porcentaje?.touched" class="mb-4">    
+                                <p *ngIf="Porcentaje?.hasError('required')" class="text-danger"><i>El porcentaje estimado es requerido.</i></p>
+                                <p *ngIf="Porcentaje?.hasError('min')" class="text-danger"><i>El porcentaje mínimo es 0.</i></p>
+                                <p *ngIf="Porcentaje?.hasError('max')" class="text-danger"><i>El porcentaje máximo es 100.</i></p>
+                            </div>
+                    </div>
+                   
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="reset()">Cancelar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" (click)="saveSoftSkill()" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- ============================================= -->
+<!-- MODAL Editar Soft Skills. -->
+<!-- ============================================= -->
+<div class="modal fade" id="editaSoftModal" tabindex="-1" aria-labelledby="editaSoftModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="editaSoftModalLabel">Edita Habilidad</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="reset()"></button>
+            </div>
+            <!-- ============================================= -->
+            <!-- FORMULARIO: Editar Soft Skills -->
+            <!-- ============================================= -->
+            <form [formGroup]="skillsForm" name="editSoftSkillsForm">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="tittleSoftSkill" class="form-label">Habilidad:</label>
+                        <input type="text" placeholder="Ingrese nueva Habilidad Social o Interpersonal" id="tittleSoftSkill" name="habilidadSoftSkill" class="form-control" formControlName="nombre" [ngClass]="{'is-invalid':Nombre?.errors && Nombre?.touched,'is-valid':!Nombre?.errors && Nombre?.touched}" required>
+                            <!-- Para comprobar la validación -->
+                            <div *ngIf="Nombre?.errors  && Nombre?.touched" class="mb-4">    
+                                <p *ngIf="Nombre?.hasError('required')" class="text-danger"><i>La habilidad es requerida.</i></p>
+                            </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="porcentajeSoftSkill" class="form-label">Agrega un Porcentaje (Escala 0 - 100):</label>
+                        <input type="number" min="0" max="100"
+                        placeholder="Valoración de dominio sobre la habilidad" id="porcentajeSoftSkill" name="porcentajeSoftSkill"  class="form-control" formControlName="porcentaje" [ngClass]="{'is-invalid':Porcentaje?.errors && Porcentaje?.touched,'is-valid':!Porcentaje?.errors && Porcentaje?.touched}" required>
+                        <!-- Para comprobar la validación -->
+                            <div *ngIf="Porcentaje?.errors  && Porcentaje?.touched" class="mb-4">    
+                                <p *ngIf="Porcentaje?.hasError('required')" class="text-danger"><i>El porcentaje estimado es requerido.</i></p>
+                                <p *ngIf="Porcentaje?.hasError('min')" class="text-danger"><i>El porcentaje mínimo es 0.</i></p>
+                                <p *ngIf="Porcentaje?.hasError('max')" class="text-danger"><i>El porcentaje máximo es 100.</i></p>
+                            </div>
+                    </div>
+                   
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="reset()">Cancelar</button>
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1" (click)="updateSoftSkill()"></i>Guardar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- MODAL Eliminar Soft Skills. -->
+<!-- ============================================= -->
+<!-- <div class="modal fade" id="eliminaSoftModal" tabindex="-1" aria-labelledby="eliminaSoftModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="eliminaSoftModalLabel">Elimina esta habilidad</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ¿Deseas eliminar esta habilidad?
+                <form>
+                    <div class="modal-footer mt-3">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button> -->
+                        <!-- ============================================= -->
+                        <!-- Botón del formulario -->
+                        <!-- ============================================= -->
+                        <!-- <button type="submit" class="btn btn-primary"><i class="fa fa-trash me-1"></i>Eliminar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> -->
