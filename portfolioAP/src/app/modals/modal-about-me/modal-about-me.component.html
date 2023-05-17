@@ -1,50 +1,71 @@
 <!-- ============================================= -->
 <!-- MODAL Editar Perfil. -->
 <!-- ============================================= -->
-<div class="modal fade" id="editaPerfilModal" tabindex="-1" aria-labelledby="editaPerfilModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="editaPerfilModalLabel">Edita tu perfil</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
+<form [formGroup]="personaForm" name="personaForm">
+    <div class="modal fade" id="editaPerfilModal" tabindex="-1" aria-labelledby="editaPerfilModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="editaPerfilModalLabel">Edita tu perfil</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
                 <!-- ============================================= -->
                 <!-- FORMULARIO Perfil -->
                 <!-- ============================================= -->
-                <form>
+                <div class="modal-body">
+                    <input type="hidden" formControlName="id">
                     <div class="mb-3">
                         <label for="fotoPerfil" class="form-label">Foto del perfil:</label>
-                        <input type="url" placeholder="Inserte URL de la foto" id="fotoPerfil" name="fotoPerfil" class="form-control" required>
+                        <input type="url" placeholder="Inserte URL de la foto" id="fotoPerfil" name="fotoPerfil" class="form-control" formControlName="img_perfil" [ngClass]="{'is-invalid':Img_perfil?.errors && Img_perfil?.touched,'is-valid':!Img_perfil?.errors && Img_perfil?.touched}" required>
+                            <!-- Para comprobar la validación -->
+                            <div *ngIf="Img_perfil?.errors  && Img_perfil?.touched" class="mb-4">
+                                <p *ngIf="Img_perfil?.hasError('required')" class="text-danger"><i>Una imagen de perfil es requerida.</i></p>
+                            </div>
                     </div>
                     <div class="mb-3">
-                        <label for="nombres" class="form-label">Nombre(s):</label>
-                        <input type="text" placeholder="Ingrese su(s) Nombre(s) y Apellido(s)" id="nombres" name="identidad" class="form-control" required>
+                        <label for="nombre" class="form-label">Nombre(s):</label>
+                        <input type="text" placeholder="Ingrese su(s) Nombre(s)" id="nombre" name="identidad" class="form-control" formControlName="nombre" [ngClass]="{'is-invalid':Nombre?.errors && Nombre?.touched,'is-valid':!Nombre?.errors && Nombre?.touched}" required>
+                            <!-- Para comprobar la validación -->
+                            <div *ngIf="Nombre?.errors  && Nombre?.touched" class="mb-4">
+                            <p *ngIf="Nombre?.hasError('required')" class="text-danger"><i>EL nombre es requerido.</i></p>
+                            </div>
                     </div>
                     <div class="mb-3">
-                        <label for="apellidos" class="form-label"> Apellido(s):</label>
-                        <input type="text" placeholder="Ingrese su(s) Nombre(s) y Apellido(s)" id="Apellidos" name="identidad" class="form-control" required>
+                        <label for="apellido" class="form-label"> Apellido(s):</label>
+                        <input type="text" placeholder="Ingrese su(s) Apellido(s)" id="apellido" name="identidad" class="form-control" formControlName="apellido" [ngClass]="{'is-invalid':Apellido?.errors && Apellido?.touched,'is-valid':!Apellido?.errors && Apellido?.touched}" required>
+                            <!-- Para comprobar la validación -->
+                            <div *ngIf="Apellido?.errors  && Apellido?.touched" class="mb-4">
+                                <p *ngIf="Apellido?.hasError('required')" class="text-danger"><i>El apellido es  requerido.</i></p>
+                            </div>
                     </div>
                     <div class="mb-3">
                         <label for="ocupacion" class="form-label">Ocupación:</label>
-                        <input type="text" placeholder="Ingrese su ocupación actual" id="ocupacion" name="ocupacion" class="form-control" required>
+                        <input type="text" placeholder="Ingrese su ocupación actual" id="ocupacion" name="ocupacion" class="form-control" formControlName="ocupacion" [ngClass]="{'is-invalid':Ocupacion?.errors && Ocupacion?.touched,'is-valid':!Ocupacion?.errors && Ocupacion?.touched}" required>
+                            <!-- Para comprobar la validación -->
+                            <div *ngIf="Ocupacion?.errors  && Ocupacion?.touched" class="mb-4">
+                                <p *ngIf="Ocupacion?.hasError('required')" class="text-danger"><i>La ocupación es requerido.</i></p>
+                            </div>
                     </div>
                     <div class="mb-3">
                         <label for="descripcionSobreMi" class="form-label">Sobre Mí:</label>
-                        <textarea type="text" placeholder="Ingrese descripción" id="descripcionSobreMi" name="descripcionSobreMi" class="form-control" required></textarea>
+                        <textarea type="text" placeholder="Ingrese descripción" id="descripcionSobreMi" name="descripcionSobreMi" class="form-control" formControlName="sobre_mi" [ngClass]="{'is-invalid':Sobre_mi?.errors && Sobre_mi?.touched,'is-valid':!Sobre_mi?.errors && Sobre_mi?.touched}" required></textarea>
+                            <!-- Para comprobar la validación -->
+                            <div *ngIf="Sobre_mi?.errors  && Sobre_mi?.touched" class="mb-4">
+                                <p *ngIf="Sobre_mi?.hasError('required')" class="text-danger"><i>La descripción es requerido.</i></p>
+                            </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <!-- ============================================= -->
-                        <!-- Botón del formulario -->
-                        <!-- ============================================= -->
-                        <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
-                    </div>
-                </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="reset()">Cerrar</button>
+                    <!-- ============================================= -->
+                    <!-- Botón del formulario -->
+                    <!-- ============================================= -->
+                    <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
+</form>
+    
 
 

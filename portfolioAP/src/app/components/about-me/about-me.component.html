@@ -1,25 +1,29 @@
 <section>
     <div class="container-fluid" id="aboutMe">
-        <div class="row align-items-center">
+        <div *ngFor="let persona of personas" class="row align-items-center">
             <!-- ============================================= -->
             <!-- Imagen de Perfil. -->
             <!-- ============================================= -->
             <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" id="contenedor-perfil">
-                <img [src]="miPortfolio.foto" class="img-fluid img-thumbnail" id="imgPerfil" alt="Foto de Perfil">
+                <img [src]="persona.img_perfil" class="img-fluid img-thumbnail" id="imgPerfil" alt="Foto de Perfil">
             </div>
             <div class="col-xs-12 col-sm-8 col-md-9 col-lg-10">
                 <h1 class="mt-2">
-                    <span class="nombres">{{miPortfolio.nombre}} </span>
-                    <span class="apellidos">{{miPortfolio.apellido}}</span>
+                    <span class="nombres">{{persona.nombre}} </span>
+                    <span class="apellidos">{{persona.apellido}}</span>
                 </h1>
                 <!-- ============================================= -->
                 <!-- BOTÓN (Trigger Modal): Editar Sobre Mí. -->
                 <!-- ============================================= -->
-                <button type="button" class="btn btn-light" id="btnEditarPerfil" data-bs-toggle="modal" data-bs-target="#editaPerfilModal"><i class="fa fa-pen-to-square"></i></button>
-                <h3 id="ocupacion" class="mb-4">{{miPortfolio.ocupacion}}</h3>
+                <button type="button" class="btn btn-light" id="btnEditarPerfil" data-bs-toggle="modal" data-bs-target="#editaPerfilModal" (click)="persona.id? findPersona(persona.id): null"><i class="fa fa-pen-to-square"></i></button>
+                <!-- El boton, lLama a la funcion con el id como argumento -->
+
+                <h3 id="ocupacion" class="mb-4">{{persona.ocupacion}}</h3>
                 <h4>Sobre Mí</h4>
-                <p id="descripcion" class="mt-2 me-2">{{miPortfolio.descripcion}}.</p>
+                <p id="descripcion" class="mt-2 me-2">{{persona.sobre_mi}}.</p>
             </div>
         </div>
     </div>
 </section>
+
+<app-modal-about-me></app-modal-about-me>
