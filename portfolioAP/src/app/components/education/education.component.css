@@ -21,6 +21,8 @@ h2, h4, button {
     display: inline-block;
 }
 
+/* =============== PARA PANTALLA MEDIANA =============== */
+/* ========== Iconos =========== */
 /* Responsive para los iconos de edición. */
 @media (min-widht: 356px), (max-width: 550px) {
     h4, button {
@@ -28,10 +30,14 @@ h2, h4, button {
     }
 }
 
-/* Quitar las imágenes y su espacio  */
+/* =============== PARA PANTALLA PEQUEÑA =============== */
+/* ========== Quitar imágenenes y espacio =========== */
 @media (max-width: 355px) {
     .col-2 {
-        display: none;
+        display: none !important;
+    }
+    .col-9 {
+        width: 100%;
     }
 }
 

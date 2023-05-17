@@ -18,26 +18,28 @@
     
     <div *ngFor="let estudio of estudiosList" class="row align-items-center border-top my-2">
         <div class="col-2 offset-1 d-flex justify-content-center">
-            <a [href]="estudio.url" target="_blank"><img class="img-fluid" [src]="estudio.logoInstitucional" alt="Logo Institucional"></a>
+            <a [href]="estudio.url_institucion" target="_blank"><img class="img-fluid" [src]="estudio.logo_institucional" alt="Logo Institucional"></a>
         </div>                           
         <div class="col-9 pt-2">
             <ul>
-                <h4 class="mt-2 institucion">{{estudio.sede}}</h4>
+                <h4 class="mt-2 institucion">{{estudio.nombre_institucion}}</h4>
                 <!-- ============================================= -->
                 <!-- BOTONES: Editar y eliminar Título Académico. -->
                 <!-- ============================================= -->
-                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#eliminaEducacionModal"><i class="fa fa-trash"></i></button>
-                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editaEducacionModal"><i class="fa fa-pen-to-square"></i></button>
-                <li class="profesion">{{estudio.profesion}}</li>
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#eliminaEducacionModal" (click)="deleteEstudio(estudio.id)"><i class="fa fa-trash"></i></button>
+                <button type="button"  (click)="findEstudio(estudio.id)" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editaEducacionModal"><i class="fa fa-pen-to-square"></i></button>
+                <li class="profesion">{{estudio.titulo_academico}}</li>
                 <li class="fecha">
-                    <span class="fechaInicio" >{{estudio.fecha.fechaInicio}}</span> - 
-                    <span class="fechaFin">{{estudio.fecha.fechaFin}}</span>
+                    <span class="fechaInicio">{{estudio.fecha_inicio | date:"dd-MM-yyyy"}}</span> - 
+                    <span class="fechaFin">{{estudio.fecha_fin | date:"dd-MM-yyyy"}}</span>
                 </li>
-                <li class="ubicacion">
-                    <span class="estado">{{estudio.ubicacion.estado}}</span> - 
-                    <span class="pais">{{estudio.ubicacion.pais}}</span>
-                </li>
+                <!-- <li class="ubicacion">
+                    <span class="estado">{{estudio}}</span> / 
+                    <span class="pais">{{estudio}}</span>
+                </li> -->
             </ul>
         </div>
     </div>
 </div>
+
+<app-modal-education></app-modal-education>
