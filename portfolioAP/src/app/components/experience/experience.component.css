@@ -39,6 +39,9 @@ button {
 /* ========== Quitar imágenenes y espacio =========== */
 @media (max-width: 355px) {
     .col-2 {
-        display: none;
+        display: none !important;
+    }
+    .col-9 {
+        width: 100%;
     }
 }

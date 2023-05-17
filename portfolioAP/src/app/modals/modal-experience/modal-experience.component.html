@@ -6,76 +6,57 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="addExperienciaModalLabel">Agrega nueva Experiencia Laboral</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="reset()"></button>
             </div>
-            <div class="modal-body">
-                <!-- ============================================= -->
-                <!-- FORMULARIO: Agregar Experiencia Laboral. -->
-                <!-- ============================================= -->
-                <form>
+            <!-- ============================================= -->
+            <!-- FORMULARIO: Agregar Experiencia Laboral. -->
+            <!-- ============================================= -->
+            <form [formGroup]="trabajoForm" name="experienciaLaboralForm">
+                <div class="modal-body">
+                    <!-- Enlazamos ts-html y específicamos la PROPIEDAD y también los INPUTS a través del formControlName-->
                     <div class="mb-3">
-                        <label for="logoInstitucional" class="form-label">Logo de la Empresa:</label>
-                        <input type="url" placeholder="Inserte URL del logo" id="logoInstitucional" alt="Logo de la empresa" class="form-control" required>
+                        <label for="logoEmpresarial" class="form-label">Logo de la Empresa:</label>
+                        <input type="url" placeholder="Inserte URL del logo de la empresa" id="logoEmpresarial" alt="Logo de la Empresa" class="form-control" formControlName="logo_empresarial" [ngClass]="{'is-invalid':Logo_empresarial?.errors && Logo_empresarial?.touched,'is-valid':!Logo_empresarial?.errors && Logo_empresarial?.touched}" required>
+                            <!-- Para comprobar la validación -->
+                            <div *ngIf="Logo_empresarial?.errors  && Logo_empresarial?.touched" class="mb-4">
+                                <p *ngIf="Logo_empresarial?.hasError('required')" class="text-danger"><i>El logo de la Empresa requerido.</i></p>
+                            </div>
                     </div>
                     <div class="mb-3">
-                        <label for="cargo" class="form-label">Cargo u ocupación:</label>
-                        <input type="text" placeholder="Ingrese su cargo u ocupación" id="cargo" name="cargo" class="form-control" required>
+                        <label for="urlEmpresa" class="form-label">URL de la Empresa:</label>
+                        <input type="url" placeholder="Inserte URL de la Institución" id="urlEmpresa" alt="URL de la Empresa" class="form-control" formControlName="url_empresa" [ngClass]="{'is-invalid':Url_empresa?.errors && Url_empresa?.touched,'is-valid':!Url_empresa?.errors && Url_empresa?.touched}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="empresa" class="form-label">Empresa:</label>
+                        <input type="text" placeholder="Ingrese nombre de la Empresa" id="empresa" name="empresa" class="form-control" formControlName="nombre_empresa" [ngClass]="{'is-invalid':Nombre_empresa?.errors && Nombre_empresa?.touched,'is-valid':!Nombre_empresa?.errors && Nombre_empresa?.touched}" required>
+                            <div *ngIf="Nombre_empresa?.errors  && Nombre_empresa?.touched" class="mb-4">
+                                <p *ngIf="Nombre_empresa?.hasError('required')" class="text-danger"><i>El nombre de la Empresa es requerido.</i></p>
+                            </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cargo" class="form-label">Cargo:</label>
+                        <input type="text" placeholder="Ingrese ocupación en la Empresa" id="cargo" name="cargo" class="form-control" formControlName="cargo" [ngClass]="{'is-invalid':Cargo?.errors && Cargo?.touched,'is-valid':!Cargo?.errors && Cargo?.touched}" required>
+                            <div *ngIf="Cargo?.errors  && Cargo?.touched" class="mb-4">
+                                <p *ngIf="Cargo?.hasError('required')" class="text-danger"><i>El título académico es requerido.</i></p>
+                            </div>
                     </div>
                     <div class="mb-3">
                         <label for="fechaInicio" class="form-label">Fecha de inicio:</label>
-                        <input type="month" id="fechaInicio" name="fechaInicio" class="form-control" required>
+                        <input type="month" id="fechaInicio" name="fechaInicio" class="form-control" formControlName="fecha_inicio" [ngClass]="{'is-invalid':Fecha_inicio?.errors && Fecha_inicio?.touched,'is-valid':!Fecha_inicio?.errors && Fecha_inicio?.touched}">
                     </div>
                     <div class="mb-3">
                         <label for="fechaFin" class="form-label">Fecha de culminación:</label>
-                        <input type="month" id="fechaFin" name="fechaFin" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="ciudad" class="form-label">Ciudad:</label>
-                        <input type="text" placeholder="Ingrese Ciudad" id="ciudad" name="ubicacion" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="estado" class="form-label">Estado o Provincia:</label>
-                        <input type="text" placeholder="Ingrese Estado o Provincia" id="estado" name="ubicacion" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="pais" class="form-label">País:</label>
-                        <input type="text" placeholder="Ingrese País" id="pais" name="ubicacion" class="form-control" required>
+                        <input type="month" id="fechaFin" name="fechaFin" class="form-control" formControlName="fecha_fin" [ngClass]="{'is-invalid':Fecha_fin?.errors && Fecha_fin?.touched,'is-valid':!Fecha_fin?.errors && Fecha_fin?.touched}">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="reset()">Cancelar</button>
                         <!-- ============================================= -->
                         <!-- Botón del formulario -->
                         <!-- ============================================= -->
-                        <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
+                        <button type="submit" (click)="onSave()" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
                     </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ============================================= -->
-<!-- MODAL Eliminar Experiencia laboral. -->
-<!-- ============================================= -->
-<div class="modal fade" id="eliminaExperienciaModal" tabindex="-1" aria-labelledby="eliminaExperienciaModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="eliminaExperienciaModalLabel">Elimina Experiencia Laboral</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                ¿Deseas eliminar esta experiencia laboral?
-                <form>
-                    <div class="modal-footer mt-3">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <!-- ============================================= -->
-                        <!-- Botón del formulario -->
-                        <!-- ============================================= -->
-                        <button type="submit" class="btn btn-primary"><i class="fa fa-trash me-1"></i>Eliminar</button>
-                    </div>
-                </form>
-            </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -90,48 +71,83 @@
                 <h1 class="modal-title fs-5" id="editaExperienciaModalLabel">Edita Experiencia Laboral</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <!-- ============================================= -->
-                <!-- FORMULARIO: Editar Experiencia Laboral. -->
-                <!-- ============================================= -->
-                <form>
+            <form [formGroup]="trabajoForm" name="experienciaLaboralForm">
+                <div class="modal-body">
+                    <!-- Enlazamos ts-html y específicamos la PROPIEDAD y también los INPUTS a través del formControlName-->
                     <div class="mb-3">
-                        <label for="logoInstitucional" class="form-label">Logo de la Empresa:</label>
-                        <input type="url" placeholder="Inserte URL del logo" id="logoInstitucional" alt="Logo de la empresa" class="form-control" required>
+                        <label for="logoEmpresarial" class="form-label">Logo de la Empresa:</label>
+                        <input type="url" placeholder="Inserte URL del logo de la empresa" id="logoEmpresarial" alt="Logo de la Empresa" class="form-control" formControlName="logo_empresarial" [ngClass]="{'is-invalid':Logo_empresarial?.errors && Logo_empresarial?.touched,'is-valid':!Logo_empresarial?.errors && Logo_empresarial?.touched}" required>
+                            <!-- Para comprobar la validación -->
+                            <div *ngIf="Logo_empresarial?.errors  && Logo_empresarial?.touched" class="mb-4">
+                                <p *ngIf="Logo_empresarial?.hasError('required')" class="text-danger"><i>El logo de la Empresa es requerido.</i></p>
+                            </div>
                     </div>
                     <div class="mb-3">
-                        <label for="cargo" class="form-label">Cargo u ocupación:</label>
-                        <input type="text" placeholder="Ingrese su cargo u ocupación" id="cargo" name="cargo" class="form-control" required>
+                        <label for="urlEmpresa" class="form-label">URL de la Empresa:</label>
+                        <input type="url" placeholder="Inserte URL de la Institución" id="urlEmpresa" alt="URL de la Empresa" class="form-control" formControlName="url_empresa">
+                    </div>
+                    <div class="mb-3">
+                        <label for="empresa" class="form-label">Empresa:</label>
+                        <input type="text" placeholder="Ingrese nombre de la Empresa" id="empresa" name="empresa" class="form-control" formControlName="nombre_empresa" [ngClass]="{'is-invalid':Nombre_empresa?.errors && Nombre_empresa?.touched,'is-valid':!Nombre_empresa?.errors && Nombre_empresa?.touched}" required>
+                            <div *ngIf="Nombre_empresa?.errors  && Nombre_empresa?.touched" class="mb-4">
+                                <p *ngIf="Nombre_empresa?.hasError('required')" class="text-danger"><i>El nombre de la Empresa es requerido.</i></p>
+                            </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cargo" class="form-label">Cargo:</label>
+                        <input type="text" placeholder="Ingrese ocupación en la Empresa" id="cargo" name="cargo" class="form-control" formControlName="cargo" [ngClass]="{'is-invalid':Cargo?.errors && Cargo?.touched,'is-valid':!Cargo?.errors && Cargo?.touched}" required>
+                            <div *ngIf="Cargo?.errors  && Cargo?.touched" class="mb-4">
+                                <p *ngIf="Cargo?.hasError('required')" class="text-danger"><i>El cargo es requerido.</i></p>
+                            </div>
                     </div>
                     <div class="mb-3">
                         <label for="fechaInicio" class="form-label">Fecha de inicio:</label>
-                        <input type="month" id="fechaInicio" name="fechaInicio" class="form-control" required>
+                        <input type="month" id="fechaInicio" name="fechaInicio" class="form-control" formControlName="fecha_inicio" [ngClass]="{'is-invalid':Fecha_inicio?.errors && Fecha_inicio?.touched,'is-valid':!Fecha_inicio?.errors && Fecha_inicio?.touched}" required>
+                            <div *ngIf="Fecha_inicio?.errors  && Fecha_inicio?.touched" class="mb-4">
+                                <p *ngIf="Fecha_inicio?.hasError('required')" class="text-danger"><i>La fecha de inicio es requerida.</i></p>
+                            </div>
                     </div>
                     <div class="mb-3">
                         <label for="fechaFin" class="form-label">Fecha de culminación:</label>
-                        <input type="month" id="fechaFin" name="fechaFin" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="ciudad" class="form-label">Ciudad:</label>
-                        <input type="text" placeholder="Ingrese Ciudad" id="ciudad" name="ubicacion" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="estado" class="form-label">Estado o Provincia:</label>
-                        <input type="text" placeholder="Ingrese Estado o Provincia" id="estado" name="ubicacion" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="pais" class="form-label">País:</label>
-                        <input type="text" placeholder="Ingrese País" id="pais" name="ubicacion" class="form-control" required>
+                        <input type="month" id="fechaFin" name="fechaFin" class="form-control" formControlName="fecha_fin" [ngClass]="{'is-invalid':Fecha_fin?.errors && Fecha_fin?.touched,'is-valid':!Fecha_fin?.errors && Fecha_fin?.touched}" required>
+                        <div *ngIf="Fecha_fin?.errors  && Fecha_fin?.touched" class="mb-4">
+                            <p *ngIf="Fecha_fin?.hasError('required')" class="text-danger"><i>La fecha de culminación es requerida.</i></p>
+                        </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="reset()">Cancelar</button>
                         <!-- ============================================= -->
                         <!-- Botón del formulario -->
                         <!-- ============================================= -->
-                        <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1"></i>Guardar</button>
+                        <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk me-1" (click)="onUpdate()"></i>Guardar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- MODAL Eliminar Experiencia laboral. -->
+<!-- ============================================= -->
+<!-- <div class="modal fade" id="eliminaExperienciaModal" tabindex="-1" aria-labelledby="eliminaExperienciaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="eliminaExperienciaModalLabel">Elimina Experiencia Laboral</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ¿Deseas eliminar esta experiencia laboral?
+                <form>
+                    <div class="modal-footer mt-3">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        
+                        
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-trash me-1"></i>Eliminar</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-</div>
+</div> -->

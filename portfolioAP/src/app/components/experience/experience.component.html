@@ -4,7 +4,7 @@
     <!-- ============================================= -->
     <div class="row">
         <div class="col">
-            <h2>Experiencia laboral</h2>
+            <h2>Experiencia Laboral</h2>
             <!-- ============================================= -->
             <!-- BOTÓN Trigger Modal: Agregar Experiencia laboral. -->
             <!-- ============================================= -->
@@ -16,33 +16,29 @@
 
     <!-- Directiva estructural *ngFor: recorre cada elemento y lo muestra -->
 
-    <div *ngFor="let trabajo of trabajosList" class="row align-items-center border-top my-2" id="cargo">   
+    <div *ngFor="let experiencia of trabajosList" class="row align-items-center border-top my-2" id="cargo">   
         <div class="col-2 offset-1 d-flex justify-content-center">
-            <a [href]="trabajo.url" target="_blank"><img class="img-fluid" [src]="trabajo.logoEmpresarial" alt="Logo Empresarial"></a>
-
+            <a [href]="experiencia.url_empresa" target="_blank"><img class="img-fluid" [src]="experiencia.logo_empresarial" alt="Logo Empresarial"></a>
         </div>                           
         <div class="col-9 pt-2">
             <ul>
-                <h4 class="cargo">{{trabajo.cargo}}</h4>
+                <h4 class="cargo">{{experiencia.cargo}}</h4>
                 <!-- ============================================= -->
                 <!-- BOTONES (Trigger Modal): Editar y eliminar Experiencia laboral. -->
                 <!-- ============================================= -->
-                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#eliminaExperienciaModal"><i class="fa fa-trash"></i></button>
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#eliminaExperienciaModal"><i class="fa fa-trash" (click)="deleteExperienciaLaboral(experiencia.id)"></i></button>
                 <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editaExperienciaModal"><i class="fa fa-pen-to-square"></i></button>
                 <!-- ============================================= -->
                 <!-- Datos de la Experiencia laboral. -->
                 <!-- ============================================= -->
-                <li class="sede">{{trabajo.sede}}</li>
+                <li class="sede">{{experiencia.nombre_empresa}}</li>
                 <li class="fecha">
-                    <span class="fechaInicio">{{trabajo.fecha.fechaInicio}}</span> - 
-                    <span class="fechaFin">{{trabajo.fecha.fechaFin}}</span>
-                </li>
-                <li class="ubicacion">
-                    <span class="ciudad">{{trabajo.ubicacion.ciudad}}</span> - 
-                    <span class="estado">{{trabajo.ubicacion.estado}}</span> -
-                    <span class="pais">{{trabajo.ubicacion.pais}}</span>
+                    <span class="fechaInicio">{{experiencia.fecha_inicio}}</span> - 
+                    <span class="fechaFin">{{experiencia.fecha_fin}}</span>
                 </li>
             </ul>
         </div>
     </div>
 </div>
+
+<app-modal-experience></app-modal-experience>
