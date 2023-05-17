@@ -19,7 +19,7 @@ export class InterceptorService implements HttpInterceptor{
     if (currentUser && currentUser.id) {
       request.clone({
         setHeaders: {
-          Authorization: `Bearer ${currentUser.id}`
+          Authorization: `Bearer ${currentUser.id}` //Acentos graves y me devuelve los datos de la persona.
         }
       })
     }

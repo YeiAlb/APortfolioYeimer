@@ -34,7 +34,7 @@ export class AutenticacionService {
     return this.http.post<any>(this.url, credenciales, httpOptions).pipe(map(data => {
       //sessionStorage ('clave', valor) e inyectamos el servio de autenticación en el componente.
       sessionStorage.setItem('currentUser', JSON.stringify(data));
-      sessionStorage.setItem('idUser', JSON.stringify(data.id));
+      // sessionStorage.setItem('idUser', JSON.stringify(data.id));
       this.currentUserSubject.next(data);
       return data;
     }));        
