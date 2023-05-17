@@ -5,28 +5,33 @@
     <div class="loginBox"><img class="user" src="https://i.ibb.co/yVGxFPR/2.png" height="100px" width="100px">
         <h3>INICIAR SESIÓN</h3>
         <!-- Enlazamos ts-html y específicamos la PROPIEDAD y también los INPUTS a través del formControlName-->
-        <form [formGroup]="loginForm">
-            <p class="text-danger">{{loginError}}</p>
+        <form [formGroup]="loginForm" (ngSubmit)="onEnviar($event)">
+            <!-- ============================================= -->
+            <!-- Email. -->
+            <!-- ============================================= -->
             <div class="mb-3">
-                <label for="InputEmail" class="form-label">Tu email:</label>
-                <input formControlName="email" type="email" class="form-control" id="InputEmail" required>
+                <label for="inputEmail" class="form-label">Tu email:</label>
+                <input formControlName="correo" type="email" class="form-control" id="inputEmail" required>
                     <!--MENSAJES PERSONALIZADOS en los formularios, se accede a través de un GET -->
-                    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+                    <div *ngIf="Correo.invalid && (Correo.dirty || Correo.touched)" class="text-danger">
                         <!-- Para comprobar las validaciones de email son dos-->
-                        <div *ngIf="email.errors?.['required']">
+                        <div *ngIf="Correo.errors?.['required']">
                             El email es requerido.
                         </div>
-                        <div *ngIf="email.errors?.['email']">
+                        <div *ngIf="Correo.errors?.['email']">
                             El email debe tener un formato válido.
                         </div>
                     </div>
             </div>
+            <!-- ============================================= -->
+            <!-- Password. -->
+            <!-- ============================================= -->
             <div class="mb-3">
-                <label for="InputPassword" class="form-label">Tu contraseña:</label>
-                <input formControlName="password" type="password" class="form-control" id="InputPassword" required>
-                <div *ngIf="password.invalid && (email.dirty || email.touched)" class="text-danger">
+                <label for="inputPassword" class="form-label">Tu contraseña:</label>
+                <input formControlName="clave" type="password" class="form-control" id="inputPassword" required>
+                <div *ngIf="Clave.invalid && (Clave.dirty || Clave.touched)" class="text-danger">
                     <!-- Para comprobar la validación de password -->
-                    <div *ngIf="password.errors?.['required']">
+                    <div *ngIf="Clave.errors?.['required']">
                         La contraseña es requerida.
                     </div>
                 </div>
@@ -35,7 +40,7 @@
                 <!-- ============================================= -->
                 <!-- BOTÓN DEL FORMULARIO -->
                 <!-- ============================================= -->
-                <button type="submit" (click)="login()" class="btn btn-primary">Entrar</button>
+                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
                 <!-- Se llama al método, e inyectamos (servicio de rutas) en el constructor del ts -->
             </div>
         </form>

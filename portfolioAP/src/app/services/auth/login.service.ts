@@ -1,7 +1,6 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-//Hacemos peticiones y obtenemos respuesta.
-import { Injectable } from '@angular/core';
-import { catchError, Observable, throwError, BehaviorSubject, tap } from 'rxjs';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http'; //Hacemos peticiones (CRUD) y obtenemos respuesta.
+import { Injectable } from '@angular/core'; //Servicio para ser usado (inyectado) en los componentes por subscripción en el constructor.
+import { catchError, Observable, throwError, BehaviorSubject, tap } from 'rxjs'; //Subcripción para futuros eventos asíncronos.
 import { LoginRequest } from './loginRequest';
 import { User } from './user';
 
@@ -12,7 +11,7 @@ export class LoginService {
 
   //COMUNICACIÓN entre componentes
   currentUserLoginOn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
-  currentUserData: BehaviorSubject<User> = new BehaviorSubject<User>({id: 0, email:''}); //Ahora informar el inicio de sesión con el método next, el momento que se hace la llamada.
+  currentUserData: BehaviorSubject<User> = new BehaviorSubject<User>({id: 0, correo:''}); //Ahora informar el inicio de sesión con el método next, el momento que se hace la llamada.
 
   constructor(private http:HttpClient) { }
 
@@ -29,13 +28,13 @@ export class LoginService {
 
   // Creamos un método login que se va a comunicar con la API Rest; y un argumento (credentials) para comprobar que los datos lleguen al servicio.
 
-  //recordemos inyectar el servicio httpClient en el modulo.ts y IMPORTARLO para que sea INYECTADO en el constructor con un ALIAS. También trabajamos con un métodos propio de http: get..
+  //recordemos inyectar el servicio httpClient en el modulo.ts e IMPORTARLO para que sea INYECTADO en el constructor con un ALIAS. También trabajamos con un métodos propio de http: get..
 
   //Creamos la INTERFACE (user.ts) y así cambiar el tipo de datos <any> que identifica al OBSERVABLE.
 
   //login   (credentials:   any)   {    console.log(credentials);   }
   login(credentials: LoginRequest):Observable<User> {
-    return this.http.get<User>('././assets/data/data.json').pipe(
+    return this.http.get<User>('https://portfoliobackend-x6ip.onrender.com/persona/autenticacion/login').pipe(
       tap( (userData: User) => {
         //Emisión de información a los componentes subscritos, ahora las propiedades
         this.currentUserData.next(userData);

@@ -6,7 +6,7 @@
         "foto": "./assets/img/fotoPerfil.jpg",
         "email": "mr.yeimeralberto@gmail.com",
         "ocupacion": "Full Stack Developer Jr",
-        "descripcion": "Soy un educador con experiencia en docencia universitaria; habilidades organizativas, liderazgo de grupos, uso algunas plataformas de aula virtual, me agrada enseñar, pero sobre todos estar en continuo aprendizaje, especialmente ahora sobre programación y desarrollo WEB, como meta para crecer y afianzarme profesionalmente por medio del auge tecnológico, y formando parte de diversos proyectos junto a equipos de trabajo."
+        "descripcion": "Soy un educador con experiencia en docencia universitaria; habilidades organizativas, liderazgo de grupos me agrada enseñar, pero sobre todo estar en continuo aprendizaje, ahora, de manera directa, en programación y desarrollo WEB, como meta para crecer y afianzarme profesionalmente a través del auge tecnológico, formando parte de diversos proyectos junto a equipos de trabajo."
     },
     
     "redes": [
@@ -30,13 +30,13 @@
         }
     ],
 
-    "trabajos": [
+    "experienciasLaborales": [
         {
             "id": 1,
             "logoEmpresarial": "./assets/img/logos/freelancer-logo.jpg",
             "url": "",
+            "empresa": "Autónomo",
             "cargo": "Tutor Académico",
-            "sede": "Freelance",
             "fecha": {
                 "fechaInicio": "mayo 2019",
                 "fechaFin": "actualmente"
@@ -51,8 +51,8 @@
             "id": 2,
             "logoEmpresarial": "./assets/img/logos/logo_ula.jpg",
             "url": "http://www.ula.ve/index.php",
+            "empresa": "Universidad de Los Andes (ULA) Nucleo 'Pedro Rincón Gutiérrez'",
             "cargo": "Profesor Universitario",
-            "sede": "Universidad de Los Andes (ULA) Nucleo 'Pedro Rincón Gutiérrez'",
             "fecha": {
                 "fechaInicio": "mayo 2013",
                 "fechaFin": "marzo 2018"
@@ -67,8 +67,8 @@
             "id": 3,
             "logoEmpresarial": "./assets/img/logos/fe-y-alegria-log.jpg",
             "url": "https://www.feyalegria.org/venezuela/",
+            "empresa": "Colegio Fe y Alegría 'Pbro. Rubén Darío Mora'",
             "cargo": "Coordinador de Pastoral",
-            "sede": "Colegio Fe y Alegría 'Pbro. Rubén Darío Mora'",
             "fecha": {
                 "fechaInicio": "octubre 2011",
                 "fechaFin": "agosto 2013"
@@ -83,8 +83,8 @@
             "id": 4,
             "logoEmpresarial": "./assets/img/logos/logo-iuesta.jpg",
             "url": "https://www.instagram.com/iuesta1/?hl=en",
+            "empresa": "Instituto Universitario Eclesiástico 'Santo Tomás de Aquino' (IUESTA)",
             "cargo": "Profesor Universitario",
-            "sede": "Instituto Universitario Eclesiástico 'Santo Tomás de Aquino' (IUESTA)",
             "fecha": {
                 "fechaInicio": "febrero 2007",
                 "fechaFin": "agosto 2011"
@@ -102,11 +102,11 @@
             "id": 1,
             "logoInstitucional": "./assets/img/logos/Logo-UBA.png",
             "url": "https://www.psi.uba.ar/",
-            "profesion": "Licenciado en Psicología",
-            "sede": "Universidad de Buenos Aires (UBA)",
+            "institucion": "Universidad de Buenos Aires (UBA)",
+            "titulo": "Licenciado en Psicología",
             "fecha": {
                 "fechaInicio": "marzo 2021",
-                "fechaFin": ""
+                "fechaFin": "actualmente"
                 },
             "ubicacion": {
                 "estado": "Capital Federal",
@@ -117,8 +117,8 @@
             "id": 2,
             "logoInstitucional": "./assets/img/logos/logo-iuesta.jpg",
             "url": "https://www.instagram.com/iuesta1/?hl=en",
-            "profesion": "Licenciado en Educación Mención Filosofía",
-            "sede": "IUESTA",
+            "institucion": "IUESTA",
+            "titulo": "Licenciado en Educación Mención Filosofía",
             "fecha": {
                 "fechaInicio": "octubre 1999",
                 "fechaFin": "agosto 2011"
@@ -132,23 +132,23 @@
             "id": 3,
             "logoInstitucional": "./assets/img/logos/Javeriana.png",
             "url": "https://www.javeriana.edu.co/inicio",
-            "profesion": "Baccalaureum in Theologiae",
-            "sede": "Universidad Javeriana",
+            "institucion": "Universidad Javeriana",
+            "titulo": "Baccalaureum in Theologiae",
             "fecha": {
                 "fechaInicio": "",
                 "fechaFin": "agosto 2007"
                 },
             "ubicacion": {
                 "estado": "Bogotá",
-                "pais": "Venezuela"
+                "pais": "Colombia"
             }
         },
         {
             "id": 4,
             "logoInstitucional": "./assets/img/logos/logo-iuesta.jpg",
             "url": "https://www.facebook.com/people/Seminario-Diocesano-Santo-Tom%C3%A1s-de-Aquino/100064599585675/",
-            "profesion": "Licenciado en Teología",
-            "sede": "IUESTA",
+            "institucion": "IUESTA",
+            "titulo": "Licenciado en Teología",
             "fecha": {
                 "fechaInicio": "octubre 2003",
                 "fechaFin": "agosto 2007"
@@ -160,76 +160,75 @@
         }
     ],
 
-    "skills": {
-        "hardSkills": [
-            {
-                "id": 1,
-                "titleHardSKill": "HTML",
-                "porcentaje": 65
-            },
-            {
-                "id": 2,
-                "titleHardSKill": "CSS",
-                "porcentaje": 55
-            },
-            {
-                "id": 3,
-                "titleHardSKill": "JavaScript",
-                "porcentaje": 45
-            },{
-                "id": 4,
-                "titleHardSKill": "GIT",
-                "porcentaje": 65
-            },
-            {
-                "id": 5,
-                "titleHardSKill": "Bootstrap",
-                "porcentaje": 45
-            },
-            {
-                "id": 6,
-                "titleHardSKill": "Angular",
-                "porcentaje": 40
-            }
-        ],
-        "softSkills": [
-            {
-                "id": 1,
-                "titleSoftSkill": "Scrum Master",
-                "porcentaje": 40
-            },
-            {
-                "id": 2,
-                "titleSoftSkill": "Liderazgo, Coordinación y Trabajo en Equipo",
-                "porcentaje": 80
-            },
-            {
-                "id": 3,
-                "titleSoftSkill": "Inteligencia y Pensamiento Crítico",
-                "porcentaje": 90
-            },
-            {
-                "id": 4,
-                "titleSoftSkill": "Capacidad resolutiva de problemas",
-                "porcentaje": 80
-            },
-            {
-                "id": 5,
-                "titleSoftSkill": "Comunicación asertiva",
-                "porcentaje": 65
-            },
-            {
-                "id": 6,
-                "titleSoftSkill": "Actitud y Empatía",
-                "porcentaje": 90
-            },
-            {
-                "id": 7,
-                "titleSoftSkill": "Inglés",
-                "porcentaje": 50
-            }
-        ]
-    },
+    
+    "hardSkills": [
+        {
+            "id": 1,
+            "subtitleHardSkill": "HTML",
+            "porcentaje": 65
+        },
+        {
+            "id": 2,
+            "subtitleHardSkill": "CSS",
+            "porcentaje": 55
+        },
+        {
+            "id": 3,
+            "subtitleHardSkill": "JavaScript",
+            "porcentaje": 45
+        },{
+            "id": 4,
+            "subtitleHardSkill": "GIT",
+            "porcentaje": 65
+        },
+        {
+            "id": 5,
+            "subtitleHardSkill": "Bootstrap",
+            "porcentaje": 45
+        },
+        {
+            "id": 6,
+            "subtitleHardSkill": "Angular",
+            "porcentaje": 40
+        },
+        {
+            "id": 7,
+            "subtitleHardSkill": "Inglés",
+            "porcentaje": 50
+        }
+    ],
+    "softSkills": [
+        {
+            "id": 1,
+            "softSkill": "Scrum Master",
+            "porcentaje": 40
+        },
+        {
+            "id": 2,
+            "softSkill": "Liderazgo, Coordinación y Trabajo en Equipo",
+            "porcentaje": 80
+        },
+        {
+            "id": 3,
+            "softSkill": "Inteligencia y Pensamiento Crítico",
+            "porcentaje": 90
+        },
+        {
+            "id": 4,
+            "softSkill": "Capacidad resolutiva de problemas",
+            "porcentaje": 80
+        },
+        {
+            "id": 5,
+            "softSkill": "Comunicación asertiva",
+            "porcentaje": 65
+        },
+        {
+            "id": 6,
+            "softSkill": "Actitud y Empatía",
+            "porcentaje": 90
+        }
+    ],
     
     "proyectos": [
         {
@@ -262,12 +261,12 @@
             "imgProyecto": "./assets/img/projects/proximo-proyecto.jpg",
             "urlProyecto": "http://localhost:4200/#",
             "titleProyecto": "Próximo proyecto",
-            "descripcionProyecto": "'Nunca se te da un sueño sin que también se te dé el poder de hacerlo realidad. Sin embargo tendrás que esforzarte'.",
+            "descripcionProyecto": "'Nunca se te da un sueño sin que también se te dé el poder de hacerlo realidad. Sin embargo tendrás que esforzarte. (Richard DeVos)'.",
             "editado": "Y_kAdyMa_R"
         }
     ],
 
-    "footer": {
+    "autoria": {
         "logo": "./assets/img/logos/Logo-YAMR.jpg",
         "fechaEdicion": 2023,
         "proveedor": "Y_kAdyMa_R"
