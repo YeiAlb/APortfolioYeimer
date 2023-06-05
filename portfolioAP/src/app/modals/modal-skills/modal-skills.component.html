@@ -61,9 +61,10 @@
             <!-- ============================================= -->
             <form [formGroup]="skillsForm" name="editHardSkillsForm">
                 <div class="modal-body">
+                    <input type="hidden" formControlName="id" [ngModel]="Id">
                     <div class="mb-3">
                         <label for="tittleHardSkill" class="form-label">Habilidad:</label>
-                        <input type="text" placeholder="Ingrese nueva Habilidad" id="tittleHardSkill" name="habilidadHardSkill" class="form-control" formControlName="nombre" [ngClass]="{'is-invalid':Nombre?.errors && Nombre?.touched,'is-valid':!Nombre?.errors && Nombre?.touched}" required>
+                        <input type="text" id="tittleHardSkill" name="habilidadHardSkill" class="form-control" formControlName="nombre" [ngModel]="Nombre" [ngClass]="{'is-invalid':Nombre?.errors && Nombre?.touched,'is-valid':!Nombre?.errors && Nombre?.touched}" required>
                         <!-- Para comprobar la validación -->
                             <div *ngIf="Nombre?.errors  && Nombre?.touched" class="mb-4">    
                                 <p *ngIf="Nombre?.hasError('required')" class="text-danger"><i>La habilidad es requerida.</i></p>
@@ -72,7 +73,7 @@
                     <div class="mb-3">
                         <label for="porcentajeHardSkill" class="form-label">Agrega un Porcentaje (Escala 0 - 100):</label>
                         <input type="number" min="0" max="100"
-                        placeholder="Valoración de dominio sobre la habilidad" id="porcentajeHardSkill" name="porcentajeHardSkill" class="form-control" formControlName="porcentaje" [ngClass]="{'is-invalid':Porcentaje?.errors && Porcentaje?.touched,'is-valid':!Porcentaje?.errors && Porcentaje?.touched}" required>
+                       id="porcentajeHardSkill" name="porcentajeHardSkill" class="form-control" formControlName="porcentaje" [ngModel]="Porcentaje" [ngClass]="{'is-invalid':Porcentaje?.errors && Porcentaje?.touched,'is-valid':!Porcentaje?.errors && Porcentaje?.touched}" required>
                         <!-- Para comprobar la validación -->
                             <div *ngIf="Porcentaje?.errors  && Porcentaje?.touched" class="mb-4">    
                                 <p *ngIf="Porcentaje?.hasError('required')" class="text-danger"><i>El porcentaje estimado es requerido.</i></p>
@@ -160,9 +161,10 @@
             <!-- ============================================= -->
             <form [formGroup]="skillsForm" name="editSoftSkillsForm">
                 <div class="modal-body">
+                    <input type="hidden" formControlName="id" [ngModel]="Id">
                     <div class="mb-3">
                         <label for="tittleSoftSkill" class="form-label">Habilidad:</label>
-                        <input type="text" placeholder="Ingrese nueva Habilidad Social o Interpersonal" id="tittleSoftSkill" name="habilidadSoftSkill" class="form-control" formControlName="nombre" [ngClass]="{'is-invalid':Nombre?.errors && Nombre?.touched,'is-valid':!Nombre?.errors && Nombre?.touched}" required>
+                        <input type="text" placeholder="Ingrese nueva Habilidad Social o Interpersonal" id="tittleSoftSkill" name="habilidadSoftSkill" class="form-control" formControlName="nombre" [ngModel]="Nombre" [ngClass]="{'is-invalid':Nombre?.errors && Nombre?.touched,'is-valid':!Nombre?.errors && Nombre?.touched}" required>
                             <!-- Para comprobar la validación -->
                             <div *ngIf="Nombre?.errors  && Nombre?.touched" class="mb-4">    
                                 <p *ngIf="Nombre?.hasError('required')" class="text-danger"><i>La habilidad es requerida.</i></p>
@@ -171,7 +173,7 @@
                     <div class="mb-3">
                         <label for="porcentajeSoftSkill" class="form-label">Agrega un Porcentaje (Escala 0 - 100):</label>
                         <input type="number" min="0" max="100"
-                        placeholder="Valoración de dominio sobre la habilidad" id="porcentajeSoftSkill" name="porcentajeSoftSkill"  class="form-control" formControlName="porcentaje" [ngClass]="{'is-invalid':Porcentaje?.errors && Porcentaje?.touched,'is-valid':!Porcentaje?.errors && Porcentaje?.touched}" required>
+                        placeholder="Valoración de dominio sobre la habilidad" id="porcentajeSoftSkill" name="porcentajeSoftSkill"  class="form-control" formControlName="porcentaje" [ngModel]="Nombre" [ngClass]="{'is-invalid':Porcentaje?.errors && Porcentaje?.touched,'is-valid':!Porcentaje?.errors && Porcentaje?.touched}" required>
                         <!-- Para comprobar la validación -->
                             <div *ngIf="Porcentaje?.errors  && Porcentaje?.touched" class="mb-4">    
                                 <p *ngIf="Porcentaje?.hasError('required')" class="text-danger"><i>El porcentaje estimado es requerido.</i></p>

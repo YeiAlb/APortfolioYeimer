@@ -39,7 +39,8 @@ export class LoginComponent {
           if (data === null || data === undefined) {
             alert("Credenciales no validas");
           } else {
-            this.route.navigate(['/portfolio/' + data.id]);
+            this.route.navigate(['/portfolio']);
+            // this.route.navigate(['/portfolio/' + data.id]);
           }
         },
         error => {

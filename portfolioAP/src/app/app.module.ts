@@ -52,7 +52,7 @@ import { PersonaService } from './services/persona.service';
     ReactiveFormsModule,
     NgCircleProgressModule.forRoot({})     // Specify ng-circle-progress as an import
   ],
-  providers: [PortfolioService, PersonaService,
+  providers: [PortfolioService,
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true}],
   bootstrap: [AppComponent]
 })

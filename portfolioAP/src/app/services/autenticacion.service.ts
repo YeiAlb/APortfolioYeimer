@@ -21,7 +21,7 @@ export class AutenticacionService {
     this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}'));
   }  
 
-  //Creamos el método de IniciarSesion que recibe como parámetro las credenciales del usuario; y lo específicamos como OBSEVABLE para que los controladores puedan subscribirse.
+  //Creamos el método de IniciarSesion que recibe como parámetro las credenciales del usuario; y lo específicamos como OBSERVABLE para que los controladores puedan subscribirse.
   //Desde este método hacemos la llamada a la API y retornar al Controlador, con el método POST(this.url, datos).métodoPIPE, que encadena operadores, (MAP(data => sesionStorage))
   //El STORAGE, un objeto, nos permite guardar los datos de manera local, sin conectar a la base de datos. Dos propiedades: localStorage,  de manera indefinida y sesionStorage;  mientras la pestaña del navegador esté abierta.
   IniciarSesion(credenciales: any): Observable<any> {
@@ -32,10 +32,11 @@ export class AutenticacionService {
     }
 
     return this.http.post<any>(this.url, credenciales, httpOptions).pipe(map(data => {
-      //sessionStorage ('clave', valor) e inyectamos el servio de autenticación en el componente.
+      //sessionStorage ('clave', valor) e inyectamos el servicio de autenticación en el componente.
       sessionStorage.setItem('currentUser', JSON.stringify(data));
       // sessionStorage.setItem('idUser', JSON.stringify(data.id));
       this.currentUserSubject.next(data);
+      console.log("authService está corriendo " + JSON.stringify(data));
       return data;
     }));        
   }

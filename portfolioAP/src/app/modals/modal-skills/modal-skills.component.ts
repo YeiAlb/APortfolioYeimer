@@ -12,8 +12,8 @@ import { SoftSkillService } from 'src/app/services/soft-skill.service';
 })
 export class ModalSkillsComponent implements OnInit{
   skillsForm: FormGroup;
-  hardList: HardSkill[] = [];
-  softList: SoftSkill[] = [];
+  hardList: HardSkill[]=[];
+  softList: SoftSkill[]=[];
 
   // skill: any;
   // id?: number;
@@ -40,6 +40,10 @@ export class ModalSkillsComponent implements OnInit{
 
   // Propiedad Getter, para acceder a los atributos personalizados, son parte de trabajoForm.
   //Campos y validaciones
+  get Id() {
+    return this.skillsForm.get("id");
+  }
+
   get Nombre() {
     return this.skillsForm.get("nombre");
   }

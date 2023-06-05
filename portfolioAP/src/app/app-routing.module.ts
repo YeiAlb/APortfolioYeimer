@@ -10,7 +10,7 @@ import { GuardGuard } from './services/guard.guard';
 const routes: Routes = [
   { path:'portfolio', component: PortfolioComponent, canActivate: [GuardGuard] },
   { path:'iniciar-sesion', component: LoginComponent },
-  { path: '', redirectTo: "/iniciar-sesion", pathMatch: 'full' },
+  { path: '', redirectTo: "/portfolio", pathMatch: 'full' },
   { path: '**', component: Error404Component }
 ];
 

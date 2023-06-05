@@ -28,7 +28,7 @@ export class LoginService {
 
   // Creamos un método login que se va a comunicar con la API Rest; y un argumento (credentials) para comprobar que los datos lleguen al servicio.
 
-  //recordemos inyectar el servicio httpClient en el modulo.ts e IMPORTARLO para que sea INYECTADO en el constructor con un ALIAS. También trabajamos con un métodos propio de http: get..
+  //recordemos inyectar el servicio httpClient en el modulo.ts e IMPORTARLO para que sea INYECTADO en el constructor con un ALIAS. También trabajamos con un método propio de http: get..
 
   //Creamos la INTERFACE (user.ts) y así cambiar el tipo de datos <any> que identifica al OBSERVABLE.
 
